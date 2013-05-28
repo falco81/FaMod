@@ -1,0 +1,21 @@
+[
+{
+  "modid": "FaMod",
+  "name": "Fa Mod",
+  "description": "The official FaMod mod!",
+  "version": "0.0.1",
+  "url": "www.github.com/falco81/famod/",
+  "updateUrl": "",
+  "authorList": [
+    "falco81"
+  ],
+  "credits": "All of you lovely modders out there!",
+  "logoFile": "/mods/FaMod/textures/logo/logo.png",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
+
