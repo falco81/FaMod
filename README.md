@@ -2,6 +2,7 @@ FaMod
 =====
 
 Prvni pokus o vytvoreni vlastniho modu pro minecraft.
+Nejedna se o plnohodnotny mod je to zatim jen pro vyuku.
 
 
 <a href="https://github.com/falco81/FaMod/tree/master/Releases">Release</a>
