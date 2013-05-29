@@ -25,7 +25,7 @@ public class ConfigurationSettings {
             Blockids.FAMODSAND = configuration.getBlock(Strings.FAMODSAND_NAME, Blockids.FAMODSAND_DEFAULT).getInt(Blockids.FAMODSAND_DEFAULT);
             Blockids.FAMODBEDROCK = configuration.getBlock(Strings.FAMODBEDROCK_NAME, Blockids.FAMODBEDROCK_DEFAULT).getInt(Blockids.FAMODBEDROCK_DEFAULT);
             /* Item configs */
-            Itemids.FAMODSICKLEEMERALD = configuration.getItem(Strings.FAMODSICKLEDIAMOND_NAME, Itemids.FAMODSICKLEEMERALD_DEFAULT).getInt(Itemids.FAMODSICKLEEMERALD_DEFAULT);
+            Itemids.FAMODSICKLEEMERALD = configuration.getItem(Strings.FAMODSICKLEEMERALD_NAME, Itemids.FAMODSICKLEEMERALD_DEFAULT).getInt(Itemids.FAMODSICKLEEMERALD_DEFAULT);
             Itemids.FAMODSICKLEGOLDEN = configuration.getItem(Strings.FAMODSICKLEGOLDEN_NAME, Itemids.FAMODSICKLEGOLDEN_DEFAULT).getInt(Itemids.FAMODSICKLEGOLDEN_DEFAULT);
             Itemids.FAMODSICKLEIRON = configuration.getItem(Strings.FAMODSICKLEIRON_NAME, Itemids.FAMODSICKLEIRON_DEFAULT).getInt(Itemids.FAMODSICKLEIRON_DEFAULT);
             Itemids.FAMODSICKLESTONE = configuration.getItem(Strings.FAMODSICKLESTONE_NAME, Itemids.FAMODSICKLESTONE_DEFAULT).getInt(Itemids.FAMODSICKLESTONE_DEFAULT);

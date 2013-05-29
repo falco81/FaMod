@@ -3,10 +3,14 @@
 	
 	<property file="build.properties" prefix="build"/>
 	<property file="build_number.properties" prefix="build_number"/>
+	<property name="build.dir.development" value="../../" />
+	<property name="build.dir.release" value="Releases" />
+	<property name="build.release.minecraft.version" value="1.5.2" />
+	<property name="build.release.mod.version" value="1.0.0" /> 
 	
 	<target name="clean">
 		<delete file="${build.dir.development}\mcp\src\minecraft\mcmod.info" />
-		<delete dir="${build.dir.development}\mcp\src\minecraft\com\pahimar" />
+		<delete dir="${build.dir.development}\mcp\src\minecraft\net\falco81" />
 		<delete dir="${build.dir.development}\mcp\reobf\minecraft" />
 	</target>
 	
@@ -60,7 +64,7 @@
 		
 		<!-- Build the jar -->
 		<mkdir dir="${build.dir.release}\${build.release.minecraft.version}\${build.release.mod.version}" />
-		<jar destfile="${build.dir.release}\${build.release.minecraft.version}\${build.release.mod.version}\famod-${build.release.mod.version}-${build_number.build_number}.jar">
+		<jar destfile="${build.dir.release}\${build.release.minecraft.version}\${build.release.mod.version}\famod-${build.release.minecraft.version}-${build.release.mod.version}-${build_number.build_number}.jar">
 			<fileset dir="${build.dir.development}\mcp\src\minecraft\" includes="mcmod.info" />
 			<fileset dir="${build.dir.development}\mcp\reobf\minecraft" />
 			<fileset dir="${build.dir.development}\source\FaMod\resources" excludes="**/xcf/**" />

@@ -3,6 +3,7 @@ package net.falco81.famod.bolcks;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.falco81.famod.lib.Blockids;
+import net.falco81.famod.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
@@ -17,11 +18,11 @@ public class ModBlocks {
         FaModSand = new Sand(Blockids.FAMODSAND);
         FaModBedrock = new Bedrock(Blockids.FAMODBEDROCK);
         
-        LanguageRegistry.addName(FaModSand, "FaModSand");
-        GameRegistry.registerBlock(FaModSand, "FaModSand");
+        LanguageRegistry.addName(FaModSand, Strings.FAMODSAND_NAME);
+        GameRegistry.registerBlock(FaModSand, Strings.FAMODSAND_NAME);
 
-        LanguageRegistry.addName(FaModBedrock, "FaModBedrock");
-        GameRegistry.registerBlock(FaModBedrock, "FaModBedrock");
+        LanguageRegistry.addName(FaModBedrock, Strings.FAMODBEDROCK_NAME);
+        GameRegistry.registerBlock(FaModBedrock, Strings.FAMODBEDROCK_NAME);
       
         initBlockRecipes();
 

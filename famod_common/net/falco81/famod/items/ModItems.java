@@ -1,6 +1,7 @@
 package net.falco81.famod.items;
 
 import net.falco81.famod.lib.Itemids;
+import net.falco81.famod.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
@@ -19,20 +20,20 @@ public class ModItems {
         FaModSickleGolden = new Sickle(Itemids.FAMODSICKLEGOLDEN, EnumToolMaterial.GOLD);
         FaModSickleEmerald = new Sickle(Itemids.FAMODSICKLEEMERALD, EnumToolMaterial.EMERALD);
 
-        LanguageRegistry.addName(new ItemStack(FaModSickleWooden, 1), "FaModSickleWooden");
-        GameRegistry.registerItem(FaModSickleWooden, "FaModSickleWooden");
+        LanguageRegistry.addName(new ItemStack(FaModSickleWooden, 1), Strings.FAMODSICKLEWOODEN_NAME);
+        GameRegistry.registerItem(FaModSickleWooden, Strings.FAMODSICKLEWOODEN_NAME);
         
-        LanguageRegistry.addName(new ItemStack(FaModSickleStone, 1), "FaModSickleStone");
-        GameRegistry.registerItem(FaModSickleStone, "FaModSickleStone");
+        LanguageRegistry.addName(new ItemStack(FaModSickleStone, 1), Strings.FAMODSICKLESTONE_NAME);
+        GameRegistry.registerItem(FaModSickleStone, Strings.FAMODSICKLESTONE_NAME);
         
-        LanguageRegistry.addName(new ItemStack(FaModSickleIron, 1), "FaModSickleIron");
-        GameRegistry.registerItem(FaModSickleIron, "FaModSickleIron");
+        LanguageRegistry.addName(new ItemStack(FaModSickleIron, 1), Strings.FAMODSICKLEIRON_NAME);
+        GameRegistry.registerItem(FaModSickleIron, Strings.FAMODSICKLEIRON_NAME);
         
-        LanguageRegistry.addName(new ItemStack(FaModSickleGolden, 1), "FaModSickleGolden");
-        GameRegistry.registerItem(FaModSickleGolden, "FaModSickleGolden");
+        LanguageRegistry.addName(new ItemStack(FaModSickleGolden, 1), Strings.FAMODSICKLEGOLDEN_NAME);
+        GameRegistry.registerItem(FaModSickleGolden, Strings.FAMODSICKLEGOLDEN_NAME);
         
-        LanguageRegistry.addName(new ItemStack(FaModSickleEmerald, 1), "FaModSickleEmerald");
-        GameRegistry.registerItem(FaModSickleEmerald, "FaModSickleEmerald");
+        LanguageRegistry.addName(new ItemStack(FaModSickleEmerald, 1), Strings.FAMODSICKLEEMERALD_NAME);
+        GameRegistry.registerItem(FaModSickleEmerald, Strings.FAMODSICKLEEMERALD_NAME);
         
         initItemRecipes();
 
@@ -53,7 +54,7 @@ public class ModItems {
                 new Object[] { " # ", "  #", "I# ", Character.valueOf('#'),
                         Item.ingotGold, Character.valueOf('I'), Item.stick });
         GameRegistry.addRecipe(new ItemStack(FaModSickleEmerald),
-                new Object[] { " # ", "  #", "I# ", Character.valueOf('#'), Item.diamond,
+                new Object[] { " # ", "  #", "I# ", Character.valueOf('#'), Item.emerald,
                         Character.valueOf('I'), Item.stick });
         
 
