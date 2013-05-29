@@ -18,10 +18,10 @@ public class ModBlocks {
         FaModSand = new Sand(Blockids.FAMODSAND);
         FaModBedrock = new Bedrock(Blockids.FAMODBEDROCK);
         
-        LanguageRegistry.addName(FaModSand, Strings.FAMODSAND_NAME);
+        LanguageRegistry.addName(FaModSand, Strings.FAMODSAND_DISNAME);
         GameRegistry.registerBlock(FaModSand, Strings.FAMODSAND_NAME);
 
-        LanguageRegistry.addName(FaModBedrock, Strings.FAMODBEDROCK_NAME);
+        LanguageRegistry.addName(FaModBedrock, Strings.FAMODBEDROCK_DISNAME);
         GameRegistry.registerBlock(FaModBedrock, Strings.FAMODBEDROCK_NAME);
       
         initBlockRecipes();

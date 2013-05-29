@@ -17,7 +17,7 @@ import net.minecraft.world.World;
 public class Sickle extends ItemTool{
     private static Block[] blocksEffectiveAgainst = new Block[] { Block.leaves,
         Block.grass, Block.vine };
-public Sickle(int itemId, EnumToolMaterial material) {
+    public Sickle(int itemId, EnumToolMaterial material) {
     super(itemId, 1, material, blocksEffectiveAgainst);
     setCreativeTab(FaMod.tabsFaMod);
     if (material.name() == "WOOD") {
