@@ -15,6 +15,7 @@ Prvni pokus o vytvoreni vlastniho modu pro minecraft.
 Zdroje informaci, ktere pouzivam pro uceni
 
 <a href="https://github.com/pahimar">Pahimar</a>
+<br>
 <a href="https://github.com/Numerios">Numerios</a>
 
 
