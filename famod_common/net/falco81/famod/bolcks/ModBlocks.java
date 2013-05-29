@@ -29,6 +29,7 @@ public class ModBlocks {
     private static void initBlockRecipes() {
 
         GameRegistry.addRecipe(new ItemStack(FaModBedrock), new Object[] { "ii", "ii", Character.valueOf('i'), FaModSand });
+//        FurnaceRecipes.smelting().addSmelting(Sand., Metadata.TIN,ModItems.ingotTin, 0.5F);
        
     }
 
