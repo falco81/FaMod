@@ -67,7 +67,7 @@
 		<jar destfile="${build.dir.release}\${build.release.minecraft.version}\${build.release.mod.version}\famod-${build.release.minecraft.version}-${build.release.mod.version}-${build_number.build_number}.jar">
 			<fileset dir="${build.dir.development}\mcp\src\minecraft\" includes="mcmod.info" />
 			<fileset dir="${build.dir.development}\mcp\reobf\minecraft" />
-			<fileset dir="${build.dir.development}\source\FaMod\resources" excludes="**/xcf/**" />
+			<fileset dir="${build.dir.development}\source\famod\resources" excludes="**/xcf/**" />
 		</jar>
 		
 		<!-- Clean up the MCP source now that we are done -->
@@ -88,7 +88,7 @@
 		<jar destfile="${build.dir.release}\${build.release.minecraft.version}\${build.release.mod.version}\famod-${build.release.mod.version}-${build_number.build_number}.jar">
 			<fileset dir="${build.dir.development}\mcp\src\minecraft\" includes="mcmod.info" />
 			<fileset dir="${build.dir.development}\mcp\reobf\minecraft" />
-			<fileset dir="${build.dir.development}\source\FaMod\resources" excludes="**/xcf/**" />
+			<fileset dir="${build.dir.development}\source\famod\resources" excludes="**/xcf/**" />
 		</jar>
 		
 		<!-- Sign the finished jar -->
