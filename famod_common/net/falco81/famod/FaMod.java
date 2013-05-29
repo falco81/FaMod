@@ -38,6 +38,7 @@ public class FaMod {
         ConfigurationSettings.init(new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + Reference.CHANNEL_NAME + File.separator + Reference.MOD_ID + ".cfg"));
         ModBlocks.init();
         ModItems.init();
+       
     }
     @Init
     public void init(FMLInitializationEvent event) {   
