@@ -5,6 +5,7 @@ import java.io.File;
 import net.falco81.famod.bolcks.ModBlocks;
 import net.falco81.famod.configuration.ConfigurationSettings;
 import net.falco81.famod.creativetab.CreativeTabFaMod;
+import net.falco81.famod.items.ModItems;
 import net.falco81.famod.lib.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
@@ -36,7 +37,7 @@ public class FaMod {
         
         ConfigurationSettings.init(new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + Reference.CHANNEL_NAME + File.separator + Reference.MOD_ID + ".cfg"));
         ModBlocks.init();
-        
+        ModItems.init();
     }
     @Init
     public void init(FMLInitializationEvent event) {   

@@ -5,6 +5,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.falco81.famod.lib.Blockids;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
 
 public class ModBlocks {
 
@@ -29,7 +30,9 @@ public class ModBlocks {
     private static void initBlockRecipes() {
 
         GameRegistry.addRecipe(new ItemStack(FaModBedrock), new Object[] { "ii", "ii", Character.valueOf('i'), FaModSand });
-//        FurnaceRecipes.smelting().addSmelting(Sand., Metadata.TIN,ModItems.ingotTin, 0.5F);
+        GameRegistry.addRecipe(new ItemStack(FaModSand, 4), new Object[] { "i", Character.valueOf('i'), FaModBedrock });
+
+        FurnaceRecipes.smelting().addSmelting(FaModSand.blockID ,0, new ItemStack(FaModBedrock), 0.5F);
        
     }
 
