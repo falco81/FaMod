@@ -29,11 +29,12 @@ public class TreeAxe extends ItemAxe {
      public boolean onBlockStartBreak(ItemStack itemstack, int x, int y, int z, EntityPlayer player) {
          World world = player.worldObj;
          Material material = world.getBlockMaterial(x, y, z);
+         Material materialchop = material;
          for (int i = x - 1; i <= x + 1; i++) {
              for (int j = y - 1; j <= y + 1; j++) {
                  for (int k = z - 1; k <= z + 1; k++) {
                      material = world.getBlockMaterial(i, j, k);
-                     if (material == Material.wood) {
+                     if ((material == Material.wood) && (materialchop == Material.wood)) {
                          world.destroyBlock(i, j, k, true);
                          itemstack.damageItem(1, player);
                      }
