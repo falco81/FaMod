@@ -9,6 +9,7 @@ import net.falco81.famod.lib.Blockids;
 import net.falco81.famod.lib.Itemids;
 import net.falco81.famod.lib.Reference;
 import net.falco81.famod.lib.Strings;
+import net.falco81.famod.lib.Worldgen;
 import net.minecraftforge.common.Configuration;
 
 public class ConfigurationSettings {
@@ -34,6 +35,8 @@ public class ConfigurationSettings {
             Itemids.FAMODSICKLEWOODEN = configuration.getItem(Strings.FAMODSICKLEWOODEN_NAME, Itemids.FAMODSICKLEWOODEN_DEFAULT).getInt(Itemids.FAMODSICKLEWOODEN_DEFAULT);
             Itemids.FAMODTREEAXE = configuration.getItem(Strings.FAMODTREEAXE_NAME, Itemids.FAMODTREEAXE_DEFAULT).getInt(Itemids.FAMODTREEAXE_DEFAULT);
             Itemids.FAMODMANGANINGOT = configuration.getItem(Strings.FAMODMANGANINGOT_NAME, Itemids.FAMODMANGANINGOT_DEFAULT).getInt(Itemids.FAMODMANGANINGOT_DEFAULT);
+            /* Worldgen configs */
+            Worldgen.WORLDGENMANGAN = configuration.get("World Generation", Strings.FAMODWORLDGENMANGAN_NAME, Worldgen.WORLDGENMANGAN_DEFAULT).getBoolean(Worldgen.WORLDGENMANGAN_DEFAULT);
 
         }
         catch (Exception e) {
