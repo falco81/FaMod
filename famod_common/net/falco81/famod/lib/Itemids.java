@@ -8,6 +8,7 @@ public class Itemids {
     public static int FAMODSICKLEGOLDEN_DEFAULT = 1270;
     public static int FAMODSICKLEEMERALD_DEFAULT = 1271;
     public static int FAMODTREEAXE_DEFAULT = 1272;
+    public static int FAMODMANGANINGOT_DEFAULT = 1273;
     
     public static int FAMODSICKLEWOODEN;
     public static int FAMODSICKLESTONE;
@@ -15,5 +16,6 @@ public class Itemids {
     public static int FAMODSICKLEGOLDEN;
     public static int FAMODSICKLEEMERALD;
     public static int FAMODTREEAXE;
+    public static int FAMODMANGANINGOT;
     
 }

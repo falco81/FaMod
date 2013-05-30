@@ -11,6 +11,9 @@ public class Strings {
     public static final String FAMODSICKLEGOLDEN_NAME = "FaModSickleGolden";
     public static final String FAMODSICKLEEMERALD_NAME = "FaModSickleEmerald";
     public static final String FAMODTREEAXE_NAME = "FaModTreeAxe";
+    public static final String FAMODMANGAN_NAME = "FaModMangan";
+    public static final String FAMODMANGANINGOT_NAME = "FaModManganIngot";
+    public static final String FAMODMANGANBLOCK_NAME = "FaModManganBlock";
     
     
     public static final String FAMODSAND_DISNAME = "FaModSand";
@@ -21,4 +24,7 @@ public class Strings {
     public static final String FAMODSICKLEGOLDEN_DISNAME = "Golden Sickle";
     public static final String FAMODSICKLEEMERALD_DISNAME = "Emerald Sickle";
     public static final String FAMODTREEAXE_DISNAME = "Emerald Axe \u00a7cThe Wood Destroyer";
+    public static final String FAMODMANGAN_DISNAME = "Mangan Ore";
+    public static final String FAMODMANGANINGOT_DISNAME = "Mangan Ingot";
+    public static final String FAMODMANGANBLOCK_DISNAME = "Mangan Block";
 }

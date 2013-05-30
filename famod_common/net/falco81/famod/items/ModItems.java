@@ -2,9 +2,7 @@ package net.falco81.famod.items;
 
 import net.falco81.famod.lib.Itemids;
 import net.falco81.famod.lib.Strings;
-import net.minecraft.block.Block;
 import net.minecraft.item.EnumToolMaterial;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -12,6 +10,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class ModItems {
     public static Sickle FaModSickleWooden, FaModSickleStone, FaModSickleIron, FaModSickleGolden, FaModSickleEmerald;
     public static TreeAxe FaModTreeAxe;
+    public static ManganIngot FaModManganIngot;
 
     public static void init() {
 
@@ -42,32 +41,12 @@ public class ModItems {
         LanguageRegistry.addName(new ItemStack(FaModTreeAxe, 1), Strings.FAMODTREEAXE_DISNAME);
         GameRegistry.registerItem(FaModTreeAxe, Strings.FAMODTREEAXE_NAME);
         
-        initItemRecipes();
-
-    }
-    
-    private static void initItemRecipes() {
-
-        GameRegistry.addRecipe(new ItemStack(FaModSickleWooden),
-                new Object[] { " # ", "  #", "I# ", Character.valueOf('#'), Block.planks,
-                        Character.valueOf('I'), Item.stick });
-        GameRegistry.addRecipe(new ItemStack(FaModSickleStone),
-                new Object[] { " # ", "  #", "I# ", Character.valueOf('#'),
-                        Block.cobblestone, Character.valueOf('I'), Item.stick });
-        GameRegistry.addRecipe(new ItemStack(FaModSickleIron),
-                new Object[] { " # ", "  #", "I# ", Character.valueOf('#'),
-                        Item.ingotIron, Character.valueOf('I'), Item.stick });
-        GameRegistry.addRecipe(new ItemStack(FaModSickleGolden),
-                new Object[] { " # ", "  #", "I# ", Character.valueOf('#'),
-                        Item.ingotGold, Character.valueOf('I'), Item.stick });
-        GameRegistry.addRecipe(new ItemStack(FaModSickleEmerald),
-                new Object[] { " # ", "  #", "I# ", Character.valueOf('#'), Item.emerald,
-                        Character.valueOf('I'), Item.stick });
+        FaModManganIngot = new ManganIngot(Itemids.FAMODMANGANINGOT);
         
-        GameRegistry.addRecipe(new ItemStack(FaModTreeAxe),
-                new Object[] { "## ", "#I ", " I ", Character.valueOf('#'), Item.emerald,
-                        Character.valueOf('I'), Item.stick });
+        LanguageRegistry.addName(new ItemStack(FaModManganIngot, 1), Strings.FAMODMANGANINGOT_DISNAME);
+        GameRegistry.registerItem(FaModManganIngot, Strings.FAMODMANGANINGOT_NAME);
+        
+              
 
-       
     }
 }

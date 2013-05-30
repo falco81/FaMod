@@ -7,6 +7,7 @@ import net.falco81.famod.configuration.ConfigurationSettings;
 import net.falco81.famod.creativetab.CreativeTabFaMod;
 import net.falco81.famod.items.ModItems;
 import net.falco81.famod.lib.Reference;
+import net.falco81.famond.recipes.Recipes;
 import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -38,6 +39,7 @@ public class FaMod {
         ConfigurationSettings.init(new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + Reference.CHANNEL_NAME + File.separator + Reference.MOD_ID + ".cfg"));
         ModBlocks.init();
         ModItems.init();
+        Recipes.initRecipes();
        
     }
     @Init

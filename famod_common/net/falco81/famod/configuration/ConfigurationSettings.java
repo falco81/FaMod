@@ -24,6 +24,8 @@ public class ConfigurationSettings {
             /* Block configs */
             Blockids.FAMODSAND = configuration.getBlock(Strings.FAMODSAND_NAME, Blockids.FAMODSAND_DEFAULT).getInt(Blockids.FAMODSAND_DEFAULT);
             Blockids.FAMODBEDROCK = configuration.getBlock(Strings.FAMODBEDROCK_NAME, Blockids.FAMODBEDROCK_DEFAULT).getInt(Blockids.FAMODBEDROCK_DEFAULT);
+            Blockids.FAMODMANGAN = configuration.getBlock(Strings.FAMODMANGAN_NAME, Blockids.FAMODMANGAN_DEFAULT).getInt(Blockids.FAMODMANGAN_DEFAULT);
+            Blockids.FAMODMANGANBLOCK = configuration.getBlock(Strings.FAMODMANGANBLOCK_NAME, Blockids.FAMODMANGANBLOCK_DEFAULT).getInt(Blockids.FAMODMANGANBLOCK_DEFAULT);
             /* Item configs */
             Itemids.FAMODSICKLEEMERALD = configuration.getItem(Strings.FAMODSICKLEEMERALD_NAME, Itemids.FAMODSICKLEEMERALD_DEFAULT).getInt(Itemids.FAMODSICKLEEMERALD_DEFAULT);
             Itemids.FAMODSICKLEGOLDEN = configuration.getItem(Strings.FAMODSICKLEGOLDEN_NAME, Itemids.FAMODSICKLEGOLDEN_DEFAULT).getInt(Itemids.FAMODSICKLEGOLDEN_DEFAULT);
@@ -31,6 +33,7 @@ public class ConfigurationSettings {
             Itemids.FAMODSICKLESTONE = configuration.getItem(Strings.FAMODSICKLESTONE_NAME, Itemids.FAMODSICKLESTONE_DEFAULT).getInt(Itemids.FAMODSICKLESTONE_DEFAULT);
             Itemids.FAMODSICKLEWOODEN = configuration.getItem(Strings.FAMODSICKLEWOODEN_NAME, Itemids.FAMODSICKLEWOODEN_DEFAULT).getInt(Itemids.FAMODSICKLEWOODEN_DEFAULT);
             Itemids.FAMODTREEAXE = configuration.getItem(Strings.FAMODTREEAXE_NAME, Itemids.FAMODTREEAXE_DEFAULT).getInt(Itemids.FAMODTREEAXE_DEFAULT);
+            Itemids.FAMODMANGANINGOT = configuration.getItem(Strings.FAMODMANGANINGOT_NAME, Itemids.FAMODMANGANINGOT_DEFAULT).getInt(Itemids.FAMODMANGANINGOT_DEFAULT);
 
         }
         catch (Exception e) {
