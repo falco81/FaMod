@@ -22,7 +22,7 @@ public class CreativeTabFaMod extends CreativeTabs {
      */
     public int getTabIconItemIndex() {
 
-        return Blockids.FAMODSAND;
+        return Blockids.FAMODMANGANORE;
     }
     
 

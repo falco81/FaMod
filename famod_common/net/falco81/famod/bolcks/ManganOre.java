@@ -17,7 +17,7 @@ public class ManganOre extends Block {
         setResistance(5.0F);
         setStepSound(soundStoneFootstep);
         setCreativeTab(FaMod.tabsFaMod);
-        setUnlocalizedName("FaModMangan");
+        setUnlocalizedName("FaModManganOre");
 
         MinecraftForge.setBlockHarvestLevel(this, "pickaxe", 3);
     }

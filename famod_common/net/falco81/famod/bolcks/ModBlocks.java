@@ -8,26 +8,17 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class ModBlocks {
 
-    public static Block FaModSand;
-    public static Block FaModBedrock;
-    public static Block FaModMangan;
+    public static Block FaModManganOre;
     public static Block FaModManganBlock;
     
     public static void init() {
 
-        FaModSand = new Sand(Blockids.FAMODSAND);
-        FaModBedrock = new Bedrock(Blockids.FAMODBEDROCK);
-        FaModMangan = new ManganOre(Blockids.FAMODMANGAN);
+        FaModManganOre = new ManganOre(Blockids.FAMODMANGANORE);
         FaModManganBlock = new ManganBlock(Blockids.FAMODMANGANBLOCK);
         
-        LanguageRegistry.addName(FaModSand, Strings.FAMODSAND_DISNAME);
-        GameRegistry.registerBlock(FaModSand, Strings.FAMODSAND_NAME);
-
-        LanguageRegistry.addName(FaModBedrock, Strings.FAMODBEDROCK_DISNAME);
-        GameRegistry.registerBlock(FaModBedrock, Strings.FAMODBEDROCK_NAME);
-      
-        LanguageRegistry.addName(FaModMangan, Strings.FAMODMANGAN_DISNAME);
-        GameRegistry.registerBlock(FaModMangan, Strings.FAMODMANGAN_NAME);
+            
+        LanguageRegistry.addName(FaModManganOre, Strings.FAMODMANGANORE_DISNAME);
+        GameRegistry.registerBlock(FaModManganOre, Strings.FAMODMANGANORE_NAME);
         
         LanguageRegistry.addName(FaModManganBlock, Strings.FAMODMANGANBLOCK_DISNAME);
         GameRegistry.registerBlock(FaModManganBlock, Strings.FAMODMANGANBLOCK_NAME);

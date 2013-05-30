@@ -23,12 +23,10 @@ public class ConfigurationSettings {
             configuration.load();
 
             /* Block configs */
-            Blockids.FAMODSAND = configuration.getBlock(Strings.FAMODSAND_NAME, Blockids.FAMODSAND_DEFAULT).getInt(Blockids.FAMODSAND_DEFAULT);
-            Blockids.FAMODBEDROCK = configuration.getBlock(Strings.FAMODBEDROCK_NAME, Blockids.FAMODBEDROCK_DEFAULT).getInt(Blockids.FAMODBEDROCK_DEFAULT);
-            Blockids.FAMODMANGAN = configuration.getBlock(Strings.FAMODMANGAN_NAME, Blockids.FAMODMANGAN_DEFAULT).getInt(Blockids.FAMODMANGAN_DEFAULT);
+            Blockids.FAMODMANGANORE = configuration.getBlock(Strings.FAMODMANGANORE_NAME, Blockids.FAMODMANGANORE_DEFAULT).getInt(Blockids.FAMODMANGANORE_DEFAULT);
             Blockids.FAMODMANGANBLOCK = configuration.getBlock(Strings.FAMODMANGANBLOCK_NAME, Blockids.FAMODMANGANBLOCK_DEFAULT).getInt(Blockids.FAMODMANGANBLOCK_DEFAULT);
             /* Item configs */
-            Itemids.FAMODSICKLEEMERALD = configuration.getItem(Strings.FAMODSICKLEEMERALD_NAME, Itemids.FAMODSICKLEEMERALD_DEFAULT).getInt(Itemids.FAMODSICKLEEMERALD_DEFAULT);
+            Itemids.FAMODSICKLEDIAMOND = configuration.getItem(Strings.FAMODSICKLEDIAMOND_NAME, Itemids.FAMODSICKLEDIAMOND_DEFAULT).getInt(Itemids.FAMODSICKLEDIAMOND_DEFAULT);
             Itemids.FAMODSICKLEGOLDEN = configuration.getItem(Strings.FAMODSICKLEGOLDEN_NAME, Itemids.FAMODSICKLEGOLDEN_DEFAULT).getInt(Itemids.FAMODSICKLEGOLDEN_DEFAULT);
             Itemids.FAMODSICKLEIRON = configuration.getItem(Strings.FAMODSICKLEIRON_NAME, Itemids.FAMODSICKLEIRON_DEFAULT).getInt(Itemids.FAMODSICKLEIRON_DEFAULT);
             Itemids.FAMODSICKLESTONE = configuration.getItem(Strings.FAMODSICKLESTONE_NAME, Itemids.FAMODSICKLESTONE_DEFAULT).getInt(Itemids.FAMODSICKLESTONE_DEFAULT);
@@ -36,6 +34,8 @@ public class ConfigurationSettings {
             Itemids.FAMODTREEAXE = configuration.getItem(Strings.FAMODTREEAXE_NAME, Itemids.FAMODTREEAXE_DEFAULT).getInt(Itemids.FAMODTREEAXE_DEFAULT);
             Itemids.FAMODMANGANINGOT = configuration.getItem(Strings.FAMODMANGANINGOT_NAME, Itemids.FAMODMANGANINGOT_DEFAULT).getInt(Itemids.FAMODMANGANINGOT_DEFAULT);
             Itemids.FAMODMANGANPICKAXE = configuration.getItem(Strings.FAMODMANGANPICKAXE_NAME, Itemids.FAMODMANGANPICKAXE_DEFAULT).getInt(Itemids.FAMODMANGANPICKAXE_DEFAULT);
+            Itemids.FAMODMANGANAXE = configuration.getItem(Strings.FAMODMANGANAXE_NAME, Itemids.FAMODMANGANAXE_DEFAULT).getInt(Itemids.FAMODMANGANAXE_DEFAULT);
+            Itemids.FAMODMANGANSWORD = configuration.getItem(Strings.FAMODMANGANSWORD_NAME, Itemids.FAMODMANGANSWORD_DEFAULT).getInt(Itemids.FAMODMANGANSWORD_DEFAULT);
             /* Worldgen configs */
             Worldgen.WORLDGENMANGAN = configuration.get("World Generation", Strings.FAMODWORLDGENMANGAN_NAME, Worldgen.WORLDGENMANGAN_DEFAULT).getBoolean(Worldgen.WORLDGENMANGAN_DEFAULT);
 

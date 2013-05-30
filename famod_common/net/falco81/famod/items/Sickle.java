@@ -29,7 +29,7 @@ public class Sickle extends ItemTool{
     } else if (material.name() == "GOLD") {
         setUnlocalizedName("sickleGolden");
     } else if (material.name() == "EMERALD") {
-        setUnlocalizedName("sickleEmerald");
+        setUnlocalizedName("sickleDiamond");
      } else {
         setUnlocalizedName("sickleUnknown");
     }
@@ -47,6 +47,7 @@ public float getStrVsBlock(ItemStack itemstack, Block block) {
 public boolean onBlockStartBreak(ItemStack itemstack, int x, int y, int z, EntityPlayer player) {
     World world = player.worldObj;
     Material material = world.getBlockMaterial(x, y, z);
+    if (material == Material.plants || material == Material.vine || material == Material.leaves) {
     for (int i = x - 1; i <= x + 1; i++) {
         for (int j = y - 1; j <= y + 1; j++) {
             for (int k = z - 1; k <= z + 1; k++) {
@@ -59,6 +60,7 @@ public boolean onBlockStartBreak(ItemStack itemstack, int x, int y, int z, Entit
             }
         }
     }
+    }    
     return false;
 }
 

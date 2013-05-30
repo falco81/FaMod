@@ -11,11 +11,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class Recipes {
     public static void initRecipes() {
 
-        GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModBedrock), new Object[] { "ii", "ii", Character.valueOf('i'), ModBlocks.FaModSand });
-        GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModSand, 4), new Object[] { "i", Character.valueOf('i'), ModBlocks.FaModBedrock });
-
-        FurnaceRecipes.smelting().addSmelting(ModBlocks.FaModSand.blockID ,0, new ItemStack(ModBlocks.FaModBedrock), 0.5F);
-        FurnaceRecipes.smelting().addSmelting(ModBlocks.FaModMangan.blockID ,0, new ItemStack(ModItems.FaModManganIngot), 0.5F);
+        
+        FurnaceRecipes.smelting().addSmelting(ModBlocks.FaModManganOre.blockID ,0, new ItemStack(ModItems.FaModManganIngot), 0.5F);
         
         
         GameRegistry.addRecipe(new ItemStack(ModItems.FaModSickleWooden),
@@ -30,8 +27,8 @@ public class Recipes {
         GameRegistry.addRecipe(new ItemStack(ModItems.FaModSickleGolden),
                 new Object[] { " # ", "  #", "I# ", Character.valueOf('#'),
                         Item.ingotGold, Character.valueOf('I'), Item.stick });
-        GameRegistry.addRecipe(new ItemStack(ModItems.FaModSickleEmerald),
-                new Object[] { " # ", "  #", "I# ", Character.valueOf('#'), Item.emerald,
+        GameRegistry.addRecipe(new ItemStack(ModItems.FaModSickleDiamond),
+                new Object[] { " # ", "  #", "I# ", Character.valueOf('#'), Item.diamond,
                         Character.valueOf('I'), Item.stick });
         
         GameRegistry.addRecipe(new ItemStack(ModItems.FaModTreeAxe),
@@ -42,6 +39,8 @@ public class Recipes {
         GameRegistry.addRecipe(new ItemStack(ModItems.FaModManganIngot, 9), new Object[] { "i", Character.valueOf('i'), ModBlocks.FaModManganBlock });
         
         GameRegistry.addRecipe(new ItemStack(ModItems.FaModManganPickAxe), new Object[] { "iii", " j ", " j ", Character.valueOf('i'), ModItems.FaModManganIngot, Character.valueOf('j'), Item.stick });
+        GameRegistry.addRecipe(new ItemStack(ModItems.FaModManganAxe), new Object[] { "ii ", "ij ", " j ", Character.valueOf('i'), ModItems.FaModManganIngot, Character.valueOf('j'), Item.stick });
+        GameRegistry.addRecipe(new ItemStack(ModItems.FaModManganSword), new Object[] { "i", "i", "j", Character.valueOf('i'), ModItems.FaModManganIngot, Character.valueOf('j'), Item.stick });
        
     }
 }

@@ -31,7 +31,7 @@ public class WorldGenerator implements IWorldGenerator {
 
     private void generateSurface(World world, Random rand, int chunkX, int chunkZ) {
         if (Worldgen.WORLDGENMANGAN)
-            this.addOre(ModBlocks.FaModMangan, world, rand, chunkX, chunkZ, 8, 20, 24, 48);
+            this.addOre(ModBlocks.FaModManganOre, world, rand, chunkX, chunkZ, 8, 20, 24, 48);
     }
 
     private void generateNether(World world, Random rand, int chunkX, int chunkZ) {}
