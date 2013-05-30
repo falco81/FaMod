@@ -7,6 +7,7 @@ import net.falco81.famod.configuration.ConfigurationSettings;
 import net.falco81.famod.creativetab.CreativeTabFaMod;
 import net.falco81.famod.items.ModItems;
 import net.falco81.famod.lib.Reference;
+import net.falco81.famod.worldgen.WorldGenerator;
 import net.falco81.famond.recipes.Recipes;
 import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
@@ -18,6 +19,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod ( modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION )
 @NetworkMod ( clientSideRequired = true, serverSideRequired = false )
@@ -44,7 +46,9 @@ public class FaMod {
     }
     @Init
     public void init(FMLInitializationEvent event) {   
-     
+        
+        GameRegistry.registerWorldGenerator(new WorldGenerator());
+        
     }
     @PostInit
     public void postInit(FMLPostInitializationEvent event) {
