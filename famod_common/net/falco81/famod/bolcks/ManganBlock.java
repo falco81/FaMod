@@ -18,7 +18,7 @@ public class ManganBlock extends Block {
         setCreativeTab(FaMod.tabsFaMod);
         setUnlocalizedName("FaModManganBlock");
 
-        MinecraftForge.setBlockHarvestLevel(this, "pickaxe", 0);
+        MinecraftForge.setBlockHarvestLevel(this, "pickaxe", 3);
     }
     
     @SideOnly(Side.CLIENT)

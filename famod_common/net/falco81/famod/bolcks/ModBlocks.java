@@ -17,7 +17,7 @@ public class ModBlocks {
 
         FaModSand = new Sand(Blockids.FAMODSAND);
         FaModBedrock = new Bedrock(Blockids.FAMODBEDROCK);
-        FaModMangan = new Mangan(Blockids.FAMODMANGAN);
+        FaModMangan = new ManganOre(Blockids.FAMODMANGAN);
         FaModManganBlock = new ManganBlock(Blockids.FAMODMANGANBLOCK);
         
         LanguageRegistry.addName(FaModSand, Strings.FAMODSAND_DISNAME);

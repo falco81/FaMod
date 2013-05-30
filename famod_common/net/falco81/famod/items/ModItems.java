@@ -1,5 +1,6 @@
 package net.falco81.famod.items;
 
+import net.falco81.famod.FaMod;
 import net.falco81.famod.lib.Itemids;
 import net.falco81.famod.lib.Strings;
 import net.minecraft.item.EnumToolMaterial;
@@ -11,6 +12,7 @@ public class ModItems {
     public static Sickle FaModSickleWooden, FaModSickleStone, FaModSickleIron, FaModSickleGolden, FaModSickleEmerald;
     public static TreeAxe FaModTreeAxe;
     public static ManganIngot FaModManganIngot;
+    public static PickAxe FaModManganPickAxe;
 
     public static void init() {
 
@@ -19,7 +21,7 @@ public class ModItems {
         FaModSickleIron = new Sickle(Itemids.FAMODSICKLEIRON, EnumToolMaterial.IRON);
         FaModSickleGolden = new Sickle(Itemids.FAMODSICKLEGOLDEN, EnumToolMaterial.GOLD);
         FaModSickleEmerald = new Sickle(Itemids.FAMODSICKLEEMERALD, EnumToolMaterial.EMERALD);
-
+        
         LanguageRegistry.addName(new ItemStack(FaModSickleWooden, 1), Strings.FAMODSICKLEWOODEN_DISNAME);
         GameRegistry.registerItem(FaModSickleWooden, Strings.FAMODSICKLEWOODEN_NAME);
         
@@ -46,6 +48,10 @@ public class ModItems {
         LanguageRegistry.addName(new ItemStack(FaModManganIngot, 1), Strings.FAMODMANGANINGOT_DISNAME);
         GameRegistry.registerItem(FaModManganIngot, Strings.FAMODMANGANINGOT_NAME);
         
+        FaModManganPickAxe = new PickAxe(Itemids.FAMODMANGANPICKAXE, FaMod.MANGAN);
+        
+        LanguageRegistry.addName(new ItemStack(FaModManganPickAxe, 1), Strings.FAMODMANGANPICKAXE_DISNAME);
+        GameRegistry.registerItem(FaModManganPickAxe, Strings.FAMODMANGANPICKAXE_NAME);
               
 
     }

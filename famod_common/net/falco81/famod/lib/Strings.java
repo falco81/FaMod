@@ -15,6 +15,7 @@ public class Strings {
     public static final String FAMODMANGANINGOT_NAME = "FaModManganIngot";
     public static final String FAMODMANGANBLOCK_NAME = "FaModManganBlock";
     public static final String FAMODWORLDGENMANGAN_NAME = "FaModWorldGenMangan";
+    public static final String FAMODMANGANPICKAXE_NAME = "FaModManganPickAxe";
     
     
     public static final String FAMODSAND_DISNAME = "FaModSand";
@@ -28,4 +29,5 @@ public class Strings {
     public static final String FAMODMANGAN_DISNAME = "Mangan Ore";
     public static final String FAMODMANGANINGOT_DISNAME = "Mangan Ingot";
     public static final String FAMODMANGANBLOCK_DISNAME = "Mangan Block";
+    public static final String FAMODMANGANPICKAXE_DISNAME = "Mangan Pickaxe";
 }

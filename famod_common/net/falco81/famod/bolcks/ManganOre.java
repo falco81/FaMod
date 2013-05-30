@@ -9,9 +9,9 @@ import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class Mangan extends Block {
+public class ManganOre extends Block {
     
-    public Mangan (int id) {
+    public ManganOre (int id) {
         super(id, Material.rock);
         setHardness(3.0F);
         setResistance(5.0F);
@@ -19,7 +19,7 @@ public class Mangan extends Block {
         setCreativeTab(FaMod.tabsFaMod);
         setUnlocalizedName("FaModMangan");
 
-        MinecraftForge.setBlockHarvestLevel(this, "pickaxe", 0);
+        MinecraftForge.setBlockHarvestLevel(this, "pickaxe", 3);
     }
     
     @SideOnly(Side.CLIENT)

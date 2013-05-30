@@ -35,6 +35,7 @@ public class ConfigurationSettings {
             Itemids.FAMODSICKLEWOODEN = configuration.getItem(Strings.FAMODSICKLEWOODEN_NAME, Itemids.FAMODSICKLEWOODEN_DEFAULT).getInt(Itemids.FAMODSICKLEWOODEN_DEFAULT);
             Itemids.FAMODTREEAXE = configuration.getItem(Strings.FAMODTREEAXE_NAME, Itemids.FAMODTREEAXE_DEFAULT).getInt(Itemids.FAMODTREEAXE_DEFAULT);
             Itemids.FAMODMANGANINGOT = configuration.getItem(Strings.FAMODMANGANINGOT_NAME, Itemids.FAMODMANGANINGOT_DEFAULT).getInt(Itemids.FAMODMANGANINGOT_DEFAULT);
+            Itemids.FAMODMANGANPICKAXE = configuration.getItem(Strings.FAMODMANGANPICKAXE_NAME, Itemids.FAMODMANGANPICKAXE_DEFAULT).getInt(Itemids.FAMODMANGANPICKAXE_DEFAULT);
             /* Worldgen configs */
             Worldgen.WORLDGENMANGAN = configuration.get("World Generation", Strings.FAMODWORLDGENMANGAN_NAME, Worldgen.WORLDGENMANGAN_DEFAULT).getBoolean(Worldgen.WORLDGENMANGAN_DEFAULT);
 

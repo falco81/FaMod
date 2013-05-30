@@ -39,6 +39,9 @@ public class Recipes {
                         Character.valueOf('I'), Item.stick });
         
         GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModManganBlock), new Object[] { "iii", "iii", "iii", Character.valueOf('i'), ModItems.FaModManganIngot });
+        GameRegistry.addRecipe(new ItemStack(ModItems.FaModManganIngot, 9), new Object[] { "i", Character.valueOf('i'), ModBlocks.FaModManganBlock });
+        
+        GameRegistry.addRecipe(new ItemStack(ModItems.FaModManganPickAxe), new Object[] { "iii", " j ", " j ", Character.valueOf('i'), ModItems.FaModManganIngot, Character.valueOf('j'), Item.stick });
        
     }
 }
