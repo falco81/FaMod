@@ -10,7 +10,6 @@ import net.falco81.famod.lib.Reference;
 import net.falco81.famod.worldgen.WorldGenerator;
 import net.falco81.famond.recipes.Recipes;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.EnumToolMaterial;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
@@ -21,7 +20,6 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraftforge.common.EnumHelper;
 
 @Mod ( modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION )
 @NetworkMod ( clientSideRequired = true, serverSideRequired = false )
@@ -35,12 +33,12 @@ public class FaMod {
     
     public static CreativeTabs tabsFaMod = new CreativeTabFaMod(CreativeTabs.getNextID(), Reference.MOD_ID);
     
-    public static EnumToolMaterial MANGAN = EnumHelper.addToolMaterial("MANGAN", 3, 1556, 12.0F, 4, 22);
-    
+       
      
     @PreInit
     public void preInit(FMLPreInitializationEvent event) {
         ConfigurationSettings.init(new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + Reference.CHANNEL_NAME + File.separator + Reference.MOD_ID + ".cfg"));
+        
         ModBlocks.init();
         ModItems.init();
         Recipes.initRecipes();

@@ -1,7 +1,7 @@
 package net.falco81.famod.items;
 
-import net.falco81.famod.FaMod;
 import net.falco81.famod.lib.Itemids;
+import net.falco81.famod.lib.Materials;
 import net.falco81.famod.lib.Strings;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemStack;
@@ -50,17 +50,17 @@ public class ModItems {
         LanguageRegistry.addName(new ItemStack(FaModManganIngot, 1), Strings.FAMODMANGANINGOT_DISNAME);
         GameRegistry.registerItem(FaModManganIngot, Strings.FAMODMANGANINGOT_NAME);
         
-        FaModManganPickAxe = new PickAxe(Itemids.FAMODMANGANPICKAXE, FaMod.MANGAN);
+        FaModManganPickAxe = new PickAxe(Itemids.FAMODMANGANPICKAXE, Materials.MANGAN);
         
         LanguageRegistry.addName(new ItemStack(FaModManganPickAxe, 1), Strings.FAMODMANGANPICKAXE_DISNAME);
         GameRegistry.registerItem(FaModManganPickAxe, Strings.FAMODMANGANPICKAXE_NAME);
         
-        FaModManganAxe = new Axe(Itemids.FAMODMANGANAXE, FaMod.MANGAN);
+        FaModManganAxe = new Axe(Itemids.FAMODMANGANAXE, Materials.MANGAN);
         
         LanguageRegistry.addName(new ItemStack(FaModManganAxe, 1), Strings.FAMODMANGANAXE_DISNAME);
         GameRegistry.registerItem(FaModManganAxe, Strings.FAMODMANGANAXE_NAME);
         
-        FaModManganSword = new Sword(Itemids.FAMODMANGANSWORD, FaMod.MANGAN);
+        FaModManganSword = new Sword(Itemids.FAMODMANGANSWORD, Materials.MANGAN);
         
         LanguageRegistry.addName(new ItemStack(FaModManganSword, 1), Strings.FAMODMANGANSWORD_DISNAME);
         GameRegistry.registerItem(FaModManganSword, Strings.FAMODMANGANSWORD_NAME);
