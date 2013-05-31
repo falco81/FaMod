@@ -14,7 +14,9 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class TreeAxe extends ItemAxe {
+
     public TreeAxe(int itemId, EnumToolMaterial material) {
+
         super(itemId, material);
         setCreativeTab(FaMod.tabsFaMod);
 
@@ -27,49 +29,21 @@ public class TreeAxe extends ItemAxe {
 
     private void Chop(int xc, int yc, int zc, EntityPlayer playerc,
             ItemStack itemstackc) {
+        for (int i = -1; i <= 1; i++) {
+            for (int j = -1; j <= 1; j++) {
+                for (int k = -1; k <= 1; k++) {
 
-        if (playerc.worldObj.getBlockMaterial(xc + 1, yc, zc) == Material.wood) {
-            Chop(xc + 1, yc, zc, playerc, itemstackc);
-        } else {
-            playerc.worldObj.destroyBlock(xc, yc, zc, true);
-            itemstackc.damageItem(1, playerc);
-        }
+                    if (playerc.worldObj.getBlockMaterial(xc + i, yc + j, zc
+                            + k) == Material.wood) {
+                        Chop(xc + i, yc + j, zc + k, playerc, itemstackc);
+                    } else {
 
-        if (playerc.worldObj.getBlockMaterial(xc - 1, yc, zc) == Material.wood) {
-            Chop(xc - 1, yc, zc, playerc, itemstackc);
-        } else {
-            playerc.worldObj.destroyBlock(xc, yc, zc, true);
-            itemstackc.damageItem(1, playerc);
-        }
+                        playerc.worldObj.destroyBlock(xc, yc, zc, true);
+                        itemstackc.damageItem(1, playerc);
 
-        if (playerc.worldObj.getBlockMaterial(xc, yc, zc + 1) == Material.wood) {
-            Chop(xc, yc, zc + 1, playerc, itemstackc);
-        } else {
-            playerc.worldObj.destroyBlock(xc, yc, zc, true);
-            itemstackc.damageItem(1, playerc);
-        }
-
-        if (playerc.worldObj.getBlockMaterial(xc, yc, zc - 1) == Material.wood) {
-            Chop(xc, yc, zc - 1, playerc, itemstackc);
-
-        } else {
-
-            playerc.worldObj.destroyBlock(xc, yc, zc, true);
-            itemstackc.damageItem(1, playerc);
-        }
-
-        if (playerc.worldObj.getBlockMaterial(xc, yc + 1, zc) == Material.wood) {
-            Chop(xc, yc + 1, zc, playerc, itemstackc);
-        } else {
-            playerc.worldObj.destroyBlock(xc, yc, zc, true);
-            itemstackc.damageItem(1, playerc);
-        }
-
-        if (playerc.worldObj.getBlockMaterial(xc, yc - 1, zc) == Material.wood) {
-            Chop(xc, yc - 1, zc, playerc, itemstackc);
-        } else {
-            playerc.worldObj.destroyBlock(xc, yc, zc, true);
-            itemstackc.damageItem(1, playerc);
+                    }
+                }
+            }
         }
 
     }
@@ -77,7 +51,8 @@ public class TreeAxe extends ItemAxe {
     @Override
     public boolean onBlockStartBreak(ItemStack itemstack, int x, int y, int z,
             EntityPlayer player) {
-                Chop(x, y, z, player, itemstack);
+
+        Chop(x, y, z, player, itemstack);
 
         return false;
     }
