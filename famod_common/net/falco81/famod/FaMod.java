@@ -7,6 +7,7 @@ import net.falco81.famod.configuration.ConfigurationSettings;
 import net.falco81.famod.creativetab.CreativeTabFaMod;
 import net.falco81.famod.items.ModItems;
 import net.falco81.famod.lib.Reference;
+import net.falco81.famod.proxy.CommonProxy;
 import net.falco81.famod.worldgen.WorldGenerator;
 import net.falco81.famond.recipes.CraftingRecipes;
 import net.falco81.famond.recipes.SmeltingRecipes;
@@ -16,6 +17,7 @@ import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.PostInit;
 import cpw.mods.fml.common.Mod.PreInit;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -29,8 +31,8 @@ public class FaMod {
     @Instance("FaMod")
     public static FaMod instance;
     
-   // @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
-   // public static CommonProxy proxy;
+   @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
+   public static CommonProxy proxy;
     
     public static CreativeTabs tabsFaMod = new CreativeTabFaMod(CreativeTabs.getNextID(), Reference.MOD_ID);
     
@@ -50,6 +52,7 @@ public class FaMod {
     public void init(FMLInitializationEvent event) {   
         
         GameRegistry.registerWorldGenerator(new WorldGenerator());
+        proxy.InitRendering();
         
     }
     @PostInit

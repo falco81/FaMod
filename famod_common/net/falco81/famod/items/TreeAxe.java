@@ -14,7 +14,6 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class TreeAxe extends ItemAxe {
-
     public TreeAxe(int itemId, EnumToolMaterial material) {
 
         super(itemId, material);
@@ -29,6 +28,7 @@ public class TreeAxe extends ItemAxe {
 
     private void Chop(int xc, int yc, int zc, EntityPlayer playerc,
             ItemStack itemstackc) {
+
         for (int i = -1; i <= 1; i++) {
             for (int j = -1; j <= 1; j++) {
                 for (int k = -1; k <= 1; k++) {
@@ -36,6 +36,7 @@ public class TreeAxe extends ItemAxe {
                     if (playerc.worldObj.getBlockMaterial(xc + i, yc + j, zc
                             + k) == Material.wood) {
                         Chop(xc + i, yc + j, zc + k, playerc, itemstackc);
+
                     } else {
 
                         playerc.worldObj.destroyBlock(xc, yc, zc, true);

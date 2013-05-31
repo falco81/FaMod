@@ -10,11 +10,14 @@ public class ModBlocks {
 
     public static Block FaModManganOre;
     public static Block FaModManganBlock;
+    public static Block FaModTuBoxBlock;
     
     public static void init() {
 
         FaModManganOre = new ManganOre(Blockids.FAMODMANGANORE);
         FaModManganBlock = new ManganBlock(Blockids.FAMODMANGANBLOCK);
+        
+        FaModTuBoxBlock = new TuBoxBlock(510);
         
             
         LanguageRegistry.addName(FaModManganOre, Strings.FAMODMANGANORE_DISNAME);
@@ -23,6 +26,8 @@ public class ModBlocks {
         LanguageRegistry.addName(FaModManganBlock, Strings.FAMODMANGANBLOCK_DISNAME);
         GameRegistry.registerBlock(FaModManganBlock, Strings.FAMODMANGANBLOCK_NAME);
       
+        LanguageRegistry.addName(FaModTuBoxBlock, "FaModTuBoxBlock");
+        GameRegistry.registerBlock(FaModTuBoxBlock, "FaModTuBoxBlock");
       
     }
 
