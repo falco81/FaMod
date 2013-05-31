@@ -47,6 +47,11 @@ public class ItemRenderTuBox  implements IItemRenderer {
                 renderTutBox(0f, 0f, 0f, 0.5f);
                 return;
             }
+            
+            case EQUIPPED_FIRST_PERSON:{
+                renderTutBox(0f, 1f, 1f, 0.5f);
+                return;
+            }
              
             default:return;
         }

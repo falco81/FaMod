@@ -1,24 +1,32 @@
 package net.falco81.famod.models;
 
-import org.lwjgl.opengl.GL11;
-
-import cpw.mods.fml.client.FMLClientHandler;
-import cpw.mods.fml.relauncher.SideOnly;
-import cpw.mods.fml.relauncher.Side;
 import net.falco81.famod.lib.FaModTileEntity;
 import net.minecraft.client.model.ModelBase;
 import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
 
+import org.lwjgl.opengl.GL11;
+
+import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 @SideOnly(Side.CLIENT)
 public class ModelTuBoxBlock extends ModelBase {
     private IModelCustom modelTutBox;
-    
+   
+      
     public ModelTuBoxBlock()
     {
-        modelTutBox = AdvancedModelLoader.loadModel("/mods/famod/models/TutBox.obj");
+        
+         modelTutBox = AdvancedModelLoader.loadModel("/mods/famod/models/TutBox.obj");
+         //modelTutBox = TechneModel.loadTechneModel("/mods/famod/models/MyBlock.tcn");
+         
+         
+                 
     }
     
+       
     public void render()
     {
         modelTutBox.renderAll();

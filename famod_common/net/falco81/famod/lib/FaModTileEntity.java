@@ -5,5 +5,6 @@ import net.minecraft.tileentity.TileEntity;
 public class FaModTileEntity  extends TileEntity {
     public FaModTileEntity()
     {
+
     }
 }
