@@ -25,36 +25,59 @@ public class TreeAxe extends ItemAxe {
         }
     }
 
+    private void Chop(int xc, int yc, int zc, EntityPlayer playerc,
+            ItemStack itemstackc) {
+
+        if (playerc.worldObj.getBlockMaterial(xc + 1, yc, zc) == Material.wood) {
+            Chop(xc + 1, yc, zc, playerc, itemstackc);
+        } else {
+            playerc.worldObj.destroyBlock(xc, yc, zc, true);
+            itemstackc.damageItem(1, playerc);
+        }
+
+        if (playerc.worldObj.getBlockMaterial(xc - 1, yc, zc) == Material.wood) {
+            Chop(xc - 1, yc, zc, playerc, itemstackc);
+        } else {
+            playerc.worldObj.destroyBlock(xc, yc, zc, true);
+            itemstackc.damageItem(1, playerc);
+        }
+
+        if (playerc.worldObj.getBlockMaterial(xc, yc, zc + 1) == Material.wood) {
+            Chop(xc, yc, zc + 1, playerc, itemstackc);
+        } else {
+            playerc.worldObj.destroyBlock(xc, yc, zc, true);
+            itemstackc.damageItem(1, playerc);
+        }
+
+        if (playerc.worldObj.getBlockMaterial(xc, yc, zc - 1) == Material.wood) {
+            Chop(xc, yc, zc - 1, playerc, itemstackc);
+
+        } else {
+
+            playerc.worldObj.destroyBlock(xc, yc, zc, true);
+            itemstackc.damageItem(1, playerc);
+        }
+
+        if (playerc.worldObj.getBlockMaterial(xc, yc + 1, zc) == Material.wood) {
+            Chop(xc, yc + 1, zc, playerc, itemstackc);
+        } else {
+            playerc.worldObj.destroyBlock(xc, yc, zc, true);
+            itemstackc.damageItem(1, playerc);
+        }
+
+        if (playerc.worldObj.getBlockMaterial(xc, yc - 1, zc) == Material.wood) {
+            Chop(xc, yc - 1, zc, playerc, itemstackc);
+        } else {
+            playerc.worldObj.destroyBlock(xc, yc, zc, true);
+            itemstackc.damageItem(1, playerc);
+        }
+
+    }
+
     @Override
     public boolean onBlockStartBreak(ItemStack itemstack, int x, int y, int z,
             EntityPlayer player) {
-        World world = player.worldObj;
-        Material material = world.getBlockMaterial(x, y, z);
-        if (material == Material.wood) {
-            int ya = y;
-
-            for (int i = x - 1; i <= x + 1; i++) {
-                for (int k = z - 1; k <= z + 1; k++) {
-
-                    while (world.getBlockMaterial(i, y, k) == Material.wood) {
-                        world.destroyBlock(i, y, k, true);
-                        itemstack.damageItem(1, player);
-                        y++;
-                        material = world.getBlockMaterial(i, y, k);
-                    }
-                    y = ya;
-                    while (world.getBlockMaterial(i, y - 1, k) == Material.wood) {
-                        world.destroyBlock(i, y - 1, k, true);
-                        itemstack.damageItem(1, player);
-                        y--;
-                        material = world.getBlockMaterial(i, y - 1, k);
-                    }
-                    y = ya;
-
-                }
-            }
-
-        }
+                Chop(x, y, z, player, itemstack);
 
         return false;
     }
