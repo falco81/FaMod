@@ -8,7 +8,8 @@ import net.falco81.famod.creativetab.CreativeTabFaMod;
 import net.falco81.famod.items.ModItems;
 import net.falco81.famod.lib.Reference;
 import net.falco81.famod.worldgen.WorldGenerator;
-import net.falco81.famond.recipes.Recipes;
+import net.falco81.famond.recipes.CraftingRecipes;
+import net.falco81.famond.recipes.SmeltingRecipes;
 import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -41,7 +42,8 @@ public class FaMod {
         
         ModBlocks.init();
         ModItems.init();
-        Recipes.initRecipes();
+        CraftingRecipes.initRecipes();
+        SmeltingRecipes.initRecipes();
        
     }
     @Init

@@ -5,15 +5,11 @@ import net.falco81.famod.items.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class Recipes {
+public class CraftingRecipes {
     public static void initRecipes() {
-
-        
-        FurnaceRecipes.smelting().addSmelting(ModBlocks.FaModManganOre.blockID ,0, new ItemStack(ModItems.FaModManganIngot), 0.5F);
-        
+      
         
         GameRegistry.addRecipe(new ItemStack(ModItems.FaModSickleWooden),
                 new Object[] { " # ", "  #", "I# ", Character.valueOf('#'), Block.planks,
