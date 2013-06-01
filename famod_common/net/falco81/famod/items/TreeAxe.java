@@ -2,6 +2,7 @@ package net.falco81.famod.items;
 
 import net.falco81.famod.FaMod;
 import net.falco81.famod.lib.Reference;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.EntityLiving;
@@ -18,6 +19,7 @@ public class TreeAxe extends ItemAxe {
 
         super(itemId, material);
         setCreativeTab(FaMod.tabsFaMod);
+     
 
         if (material.name() == "EMERALD") {
             setUnlocalizedName("axeEmerald");
@@ -40,7 +42,7 @@ public class TreeAxe extends ItemAxe {
                     } else {
 
                         playerc.worldObj.destroyBlock(xc, yc, zc, true);
-                        itemstackc.damageItem(1, playerc);
+                        //itemstackc.damageItem(1, playerc);
 
                     }
                 }
@@ -48,6 +50,7 @@ public class TreeAxe extends ItemAxe {
         }
 
     }
+    
 
     @Override
     public boolean onBlockStartBreak(ItemStack itemstack, int x, int y, int z,
@@ -55,6 +58,7 @@ public class TreeAxe extends ItemAxe {
 
         if (player.worldObj.getBlockMaterial(x, y, z) == Material.wood) {
             Chop(x, y, z, player, itemstack);
+            itemstack.damageItem(10, player);
         }
 
         return false;
