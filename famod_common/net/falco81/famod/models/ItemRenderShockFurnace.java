@@ -1,19 +1,17 @@
 package net.falco81.famod.models;
 
-import org.lwjgl.opengl.GL11;
-
-import cpw.mods.fml.client.FMLClientHandler;
-
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.IItemRenderer;
 
-public class ItemRenderTuBox  implements IItemRenderer {
+import org.lwjgl.opengl.GL11;
+
+public class ItemRenderShockFurnace  implements IItemRenderer {
   
-    private ModelTuBoxBlock modelTutBox;
+    private ModelShockFurnace modelShockFurnace;
     
-    public ItemRenderTuBox()
+    public ItemRenderShockFurnace()
     {
-        modelTutBox = new ModelTuBoxBlock();
+        modelShockFurnace = new ModelShockFurnace();
     }
 
     @Override
@@ -34,22 +32,22 @@ public class ItemRenderTuBox  implements IItemRenderer {
         switch(type)
         {
             case ENTITY:{
-                renderTutBox(0f, 0f, 0f, 0.5f);
+                renderShockFurnace(0f, 0f, 0f, 0.0625f);
                 return;
             }
              
             case EQUIPPED:{
-                renderTutBox(0f, 1f, 1f, 0.5f);
+                renderShockFurnace(0.5f, 0.5f, 0.5f, 0.0625f);
                 return;
             }
                  
             case INVENTORY:{
-                renderTutBox(0f, 0f, 0f, 0.5f);
+                renderShockFurnace(0f, 0.5f, 0f, 0.0625f);
                 return;
             }
             
             case EQUIPPED_FIRST_PERSON:{
-                renderTutBox(0f, 1f, 1f, 0.5f);
+                renderShockFurnace(1f, 0.8f, 0.5f, 0.0725f);
                 return;
             }
              
@@ -57,7 +55,7 @@ public class ItemRenderTuBox  implements IItemRenderer {
         }
     }
     
-    private void renderTutBox(float x, float y, float z, float scale)
+    private void renderShockFurnace(float x, float y, float z, float scale)
     {
         GL11.glPushMatrix();
      
@@ -68,9 +66,9 @@ public class ItemRenderTuBox  implements IItemRenderer {
         GL11.glScalef(scale, scale, scale);
         GL11.glRotatef(180f, 0f, 1f, 0f);
          
-        FMLClientHandler.instance().getClient().renderEngine.bindTexture("/mods/famod/textures/blocks/blocktutbox.png");
+      //  FMLClientHandler.instance().getClient().renderEngine.bindTexture("/mods/famod/textures/blocks/blocktutbox.png");
          
-        modelTutBox.render();
+        modelShockFurnace.render();
          
         // Re-enable Lighting Calculations
         GL11.glEnable(GL11.GL_LIGHTING);

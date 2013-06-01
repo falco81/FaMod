@@ -25,6 +25,7 @@ public class ConfigurationSettings {
             /* Block configs */
             Blockids.FAMODMANGANORE = configuration.getBlock(Strings.FAMODMANGANORE_NAME, Blockids.FAMODMANGANORE_DEFAULT).getInt(Blockids.FAMODMANGANORE_DEFAULT);
             Blockids.FAMODMANGANBLOCK = configuration.getBlock(Strings.FAMODMANGANBLOCK_NAME, Blockids.FAMODMANGANBLOCK_DEFAULT).getInt(Blockids.FAMODMANGANBLOCK_DEFAULT);
+            Blockids.FAMODSHOCKFURNACE = configuration.getBlock(Strings.FAMODSHOCKFURNACE_NAME, Blockids.FAMODSHOCKFURNACE_DEFAULT).getInt(Blockids.FAMODSHOCKFURNACE_DEFAULT);
             /* Item configs */
             Itemids.FAMODSICKLEDIAMOND = configuration.getItem(Strings.FAMODSICKLEDIAMOND_NAME, Itemids.FAMODSICKLEDIAMOND_DEFAULT).getInt(Itemids.FAMODSICKLEDIAMOND_DEFAULT);
             Itemids.FAMODSICKLEGOLDEN = configuration.getItem(Strings.FAMODSICKLEGOLDEN_NAME, Itemids.FAMODSICKLEGOLDEN_DEFAULT).getInt(Itemids.FAMODSICKLEGOLDEN_DEFAULT);

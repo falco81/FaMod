@@ -1,24 +1,23 @@
 package net.falco81.famod.bolcks;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.falco81.famod.FaMod;
 import net.falco81.famod.lib.FaModTileEntity;
-import net.falco81.famod.lib.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
-public class TuBoxBlock extends Block {
+public class ShockFurnaceBlock extends Block {
 
-    public TuBoxBlock(int id)
+    public ShockFurnaceBlock(int id)
     {
         super(id, Material.rock);
         
-        setUnlocalizedName("blockTutBox");
+        setUnlocalizedName("shockgurnace");
         setHardness(5f);
         setCreativeTab(FaMod.tabsFaMod);
     }
@@ -67,6 +66,7 @@ public class TuBoxBlock extends Block {
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister myIcon)
     {
-      blockIcon = myIcon.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName2().toLowerCase());
+      //blockIcon = myIcon.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName2().toLowerCase());
+        blockIcon= null;
     }
 }

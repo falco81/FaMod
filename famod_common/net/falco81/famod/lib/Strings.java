@@ -16,6 +16,7 @@ public class Strings {
     public static final String FAMODMANGANPICKAXE_NAME = "FaModManganPickAxe";
     public static final String FAMODMANGANAXE_NAME = "FaModManganAxe";
     public static final String FAMODMANGANSWORD_NAME = "FaModManganSword";
+    public static final String FAMODSHOCKFURNACE_NAME = "FaModShockFurnace";
 
     
     
@@ -31,4 +32,5 @@ public class Strings {
     public static final String FAMODMANGANPICKAXE_DISNAME = "Mangan Pickaxe";
     public static final String FAMODMANGANAXE_DISNAME = "Mangan Axe";
     public static final String FAMODMANGANSWORD_DISNAME = "Mangan Sword";
+    public static final String FAMODSHOCKFURNACE_DISNAME = "Shock Furnace";
 }
