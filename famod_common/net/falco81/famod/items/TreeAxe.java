@@ -53,8 +53,10 @@ public class TreeAxe extends ItemAxe {
     public boolean onBlockStartBreak(ItemStack itemstack, int x, int y, int z,
             EntityPlayer player) {
 
-        Chop(x, y, z, player, itemstack);
-        
+        if (player.worldObj.getBlockMaterial(x, y, z) == Material.wood) {
+            Chop(x, y, z, player, itemstack);
+        }
+
         return false;
     }
 
