@@ -37,6 +37,9 @@ public class CraftingRecipes {
         GameRegistry.addRecipe(new ItemStack(ModItems.FaModManganPickAxe), new Object[] { "iii", " j ", " j ", Character.valueOf('i'), ModItems.FaModManganIngot, Character.valueOf('j'), Item.stick });
         GameRegistry.addRecipe(new ItemStack(ModItems.FaModManganAxe), new Object[] { "ii ", "ij ", " j ", Character.valueOf('i'), ModItems.FaModManganIngot, Character.valueOf('j'), Item.stick });
         GameRegistry.addRecipe(new ItemStack(ModItems.FaModManganSword), new Object[] { "i", "i", "j", Character.valueOf('i'), ModItems.FaModManganIngot, Character.valueOf('j'), Item.stick });
+        
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModShockCoalBlock), new Object[] { "iii", "iii", "iii", Character.valueOf('i'), ModItems.FaModShockCoal });
+        GameRegistry.addRecipe(new ItemStack(ModItems.FaModShockCoal, 9), new Object[] { "i", Character.valueOf('i'), ModBlocks.FaModShockCoalBlock });
        
     }
 }

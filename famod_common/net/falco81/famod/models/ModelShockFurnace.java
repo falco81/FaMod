@@ -20,7 +20,7 @@ public class ModelShockFurnace extends ModelBase {
         
          //modelTutBox = AdvancedModelLoader.loadModel("/mods/famod/models/TutBox.obj");
         AdvancedModelLoader.registerModelHandler(new TechneModelLoader());
-        modelShockFurnace = AdvancedModelLoader.loadModel("/mods/famod/models/Block.tcn");
+        modelShockFurnace = AdvancedModelLoader.loadModel("/mods/famod/models/ShockFurnace.tcn");
          
          
                  
@@ -44,7 +44,7 @@ public class ModelShockFurnace extends ModelBase {
         GL11.glScalef(0.0625f, 0.0625f, 0.0625f);
      
         // Bind the texture, so that OpenGL properly textures our block.
-        //FMLClientHandler.instance().getClient().renderEngine.bindTexture("/mods/famod/textures/blocks/blocktutbox.png");
+        //FMLClientHandler.instance().getClient().renderEngine.bindTexture("/mods/famod/models/ShockFurnace.png");
      
         // Render the object, using modelTutBox.renderAll();
         this.render();

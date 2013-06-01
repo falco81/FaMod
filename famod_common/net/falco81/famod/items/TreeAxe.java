@@ -2,7 +2,6 @@ package net.falco81.famod.items;
 
 import net.falco81.famod.FaMod;
 import net.falco81.famod.lib.Reference;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.EntityLiving;

@@ -6,6 +6,7 @@ import net.falco81.famod.bolcks.ModBlocks;
 import net.falco81.famod.configuration.ConfigurationSettings;
 import net.falco81.famod.creativetab.CreativeTabFaMod;
 import net.falco81.famod.items.ModItems;
+import net.falco81.famod.lib.FaModFuelHandler;
 import net.falco81.famod.lib.Reference;
 import net.falco81.famod.proxy.CommonProxy;
 import net.falco81.famod.worldgen.WorldGenerator;
@@ -46,6 +47,7 @@ public class FaMod {
         ModItems.init();
         CraftingRecipes.initRecipes();
         SmeltingRecipes.initRecipes();
+        GameRegistry.registerFuelHandler(new FaModFuelHandler());
        
     }
     @Init

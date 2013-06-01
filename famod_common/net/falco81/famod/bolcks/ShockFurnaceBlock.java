@@ -17,7 +17,7 @@ public class ShockFurnaceBlock extends Block {
     {
         super(id, Material.rock);
         
-        setUnlocalizedName("shockgurnace");
+        setUnlocalizedName("shockfurnace");
         setHardness(5f);
         setCreativeTab(FaMod.tabsFaMod);
     }
