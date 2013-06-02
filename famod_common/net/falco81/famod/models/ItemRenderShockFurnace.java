@@ -5,6 +5,8 @@ import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
 
+import cpw.mods.fml.client.FMLClientHandler;
+
 public class ItemRenderShockFurnace  implements IItemRenderer {
   
     private ModelShockFurnace modelShockFurnace;
@@ -32,22 +34,22 @@ public class ItemRenderShockFurnace  implements IItemRenderer {
         switch(type)
         {
             case ENTITY:{
-                renderShockFurnace(0f, 0f, 0f, 0.0625f);
+                renderShockFurnace(0f, 0f, 0f, 1f);
                 return;
             }
              
             case EQUIPPED:{
-                renderShockFurnace(0.5f, 0.5f, 0.5f, 0.0625f);
+                renderShockFurnace(0.5f, -0.5f, 0.5f, 1f);
                 return;
             }
                  
             case INVENTORY:{
-                renderShockFurnace(0f, 0.5f, 0f, 0.0625f);
+                renderShockFurnace(0f, -1f, 0f, 1f);
                 return;
             }
             
             case EQUIPPED_FIRST_PERSON:{
-                renderShockFurnace(1f, 0.8f, 0.5f, 0.0725f);
+                renderShockFurnace(1f, -0.5f, 0.5f, 1f);
                 return;
             }
              
@@ -66,7 +68,7 @@ public class ItemRenderShockFurnace  implements IItemRenderer {
         GL11.glScalef(scale, scale, scale);
         GL11.glRotatef(180f, 0f, 1f, 0f);
          
-      //  FMLClientHandler.instance().getClient().renderEngine.bindTexture("/mods/famod/textures/blocks/blocktutbox.png");
+        FMLClientHandler.instance().getClient().renderEngine.bindTexture("/mods/famod/models/ShockFurnace.png");
          
         modelShockFurnace.render();
          

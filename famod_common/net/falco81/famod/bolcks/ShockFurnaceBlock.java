@@ -7,36 +7,30 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ShockFurnaceBlock extends Block {
-
-    public ShockFurnaceBlock(int id)
-    {
+    
+    public ShockFurnaceBlock(int id) {
         super(id, Material.rock);
-        
+
         setUnlocalizedName("shockfurnace");
         setHardness(5f);
         setCreativeTab(FaMod.tabsFaMod);
+
     }
     
+       
     @Override
-    public boolean hasTileEntity(int metadata)
-    {
-        return true;
-    }
-    
-    @Override
-    public boolean renderAsNormalBlock()
-    {
+    public boolean renderAsNormalBlock() {
         return false;
     }
-    
+
     @Override
-    public boolean isOpaqueCube()
-    {
+    public boolean isOpaqueCube() {
         return false;
     }
     
@@ -46,27 +40,31 @@ public class ShockFurnaceBlock extends Block {
         if(playerEntity.isSneaking())
             return false;
         
-        playerEntity.setEntityHealth(0);
+        playerEntity.attackEntityFrom(DamageSource.generic, 1);
+        return true;
+    }
+
+    
+    @Override
+    public boolean hasTileEntity(int metadata) {
         return true;
     }
     
     @Override
     public TileEntity createTileEntity(World world, int metadata)
     {
-        return new FaModTileEntity();
+      return new FaModTileEntity();    
     }
     
+        
     @Override
-    public int getRenderType()
-    {
+    public int getRenderType() {
         return -1;
     }
 
-    
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister myIcon)
-    {
-      //blockIcon = myIcon.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName2().toLowerCase());
-        blockIcon= null;
+    public void registerIcons(IconRegister myIcon) {
+        blockIcon = null;
     }
+
 }
