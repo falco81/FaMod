@@ -2,6 +2,7 @@ package net.falco81.famond.recipes;
 
 import net.falco81.famod.bolcks.ModBlocks;
 import net.falco81.famod.items.ModItems;
+import net.falco81.famod.lib.Metadata;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -41,5 +42,13 @@ public class CraftingRecipes {
         GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModShockCoalBlock), new Object[] { "iii", "iii", "iii", Character.valueOf('i'), ModItems.FaModShockCoal });
         GameRegistry.addRecipe(new ItemStack(ModItems.FaModShockCoal, 9), new Object[] { "i", Character.valueOf('i'), ModBlocks.FaModShockCoalBlock });
        
+        
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModDecorBlock, 4, Metadata.BASALTBRICK), new Object[] { "ii","ii", Character.valueOf('i'), ModBlocks.FaModBasalt });
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModDecorBlock, 4, Metadata.MARBLEBRICK), new Object[] { "ii","ii", Character.valueOf('i'), ModBlocks.FaModMarble });
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModDecorBlock, 4, Metadata.BASALTCHISELED), new Object[] { "ii","ii", Character.valueOf('i'), ModBlocks.FaModBasaltBrick });
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModDecorBlock, 1, Metadata.BASALTPAVER), new Object[] { "i", Character.valueOf('i'), ModBlocks.FaModBasalt });
+        
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModDecorBlock, 1, Metadata.BASALTBRICK), new Object[] { "i", Character.valueOf('i'), ModBlocks.FaModBasaltChiseled });
+        
     }
 }

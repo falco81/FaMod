@@ -28,6 +28,7 @@ public class ConfigurationSettings {
             Blockids.FAMODSHOCKFURNACE = configuration.getBlock(Strings.FAMODSHOCKFURNACE_NAME, Blockids.FAMODSHOCKFURNACE_DEFAULT).getInt(Blockids.FAMODSHOCKFURNACE_DEFAULT);
             Blockids.FAMODSHOCKCOALORE = configuration.getBlock(Strings.FAMODSHOCKCOALORE_NAME, Blockids.FAMODSHOCKCOALORE_DEFAULT).getInt(Blockids.FAMODSHOCKCOALORE_DEFAULT);
             Blockids.FAMODSHOCKCOALBLOCK = configuration.getBlock(Strings.FAMODSHOCKCOALBLOCK_NAME, Blockids.FAMODSHOCKCOALBLOCK_DEFAULT).getInt(Blockids.FAMODSHOCKCOALBLOCK_DEFAULT);
+            Blockids.FAMODDECORBLOCK = configuration.getBlock(Strings.FAMODDECORBLOCK_NAME, Blockids.FAMODDECORBLOCK_DEFAULT).getInt(Blockids.FAMODDECORBLOCK_DEFAULT);
             /* Item configs */
             Itemids.FAMODSICKLEDIAMOND = configuration.getItem(Strings.FAMODSICKLEDIAMOND_NAME, Itemids.FAMODSICKLEDIAMOND_DEFAULT).getInt(Itemids.FAMODSICKLEDIAMOND_DEFAULT);
             Itemids.FAMODSICKLEGOLDEN = configuration.getItem(Strings.FAMODSICKLEGOLDEN_NAME, Itemids.FAMODSICKLEGOLDEN_DEFAULT).getInt(Itemids.FAMODSICKLEGOLDEN_DEFAULT);
@@ -40,9 +41,12 @@ public class ConfigurationSettings {
             Itemids.FAMODMANGANAXE = configuration.getItem(Strings.FAMODMANGANAXE_NAME, Itemids.FAMODMANGANAXE_DEFAULT).getInt(Itemids.FAMODMANGANAXE_DEFAULT);
             Itemids.FAMODMANGANSWORD = configuration.getItem(Strings.FAMODMANGANSWORD_NAME, Itemids.FAMODMANGANSWORD_DEFAULT).getInt(Itemids.FAMODMANGANSWORD_DEFAULT);
             Itemids.FAMODSHOCKCOAL = configuration.getItem(Strings.FAMODSHOCKCOAL_NAME, Itemids.FAMODSHOCKCOAL_DEFAULT).getInt(Itemids.FAMODSHOCKCOAL_DEFAULT);
+            Itemids.FAMODMANGANDUST = configuration.getItem(Strings.FAMODMANGANDUST_NAME, Itemids.FAMODMANGANDUST_DEFAULT).getInt(Itemids.FAMODMANGANDUST_DEFAULT);
             /* Worldgen configs */
             Worldgen.WORLDGENMANGAN = configuration.get("World Generation", Strings.FAMODWORLDGENMANGAN_NAME, Worldgen.WORLDGENMANGAN_DEFAULT).getBoolean(Worldgen.WORLDGENMANGAN_DEFAULT);
             Worldgen.WORLDGENSHOCKORE = configuration.get("World Generation", Strings.FAMODWORLDGENSHOCKORE_NAME, Worldgen.WORLDGENSHOCKORE_DEFAULT).getBoolean(Worldgen.WORLDGENSHOCKORE_DEFAULT);
+            Worldgen.WORLDGENBASALT = configuration.get("World Generation", Strings.FAMODWORLDGENBASALT_NAME, Worldgen.WORLDGENBASALT_DEFAULT).getBoolean(Worldgen.WORLDGENBASALT_DEFAULT);
+            Worldgen.WORLDGENMARBLE = configuration.get("World Generation", Strings.FAMODWORLDGENMARBLE_NAME, Worldgen.WORLDGENMARBLE_DEFAULT).getBoolean(Worldgen.WORLDGENMARBLE_DEFAULT);
 
         }
         catch (Exception e) {

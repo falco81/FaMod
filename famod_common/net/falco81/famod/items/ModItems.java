@@ -16,6 +16,7 @@ public class ModItems {
     public static Axe FaModManganAxe;
     public static Sword FaModManganSword;
     public static ShockCoal FaModShockCoal;
+    public static ManganDust FaModManganDust;
 
     public static void init() {
 
@@ -25,52 +26,55 @@ public class ModItems {
         FaModSickleGolden = new Sickle(Itemids.FAMODSICKLEGOLDEN, EnumToolMaterial.GOLD);
         FaModSickleDiamond = new Sickle(Itemids.FAMODSICKLEDIAMOND, EnumToolMaterial.EMERALD);
         
-        LanguageRegistry.addName(new ItemStack(FaModSickleWooden, 1), Strings.FAMODSICKLEWOODEN_DISNAME);
         GameRegistry.registerItem(FaModSickleWooden, Strings.FAMODSICKLEWOODEN_NAME);
-        
-        LanguageRegistry.addName(new ItemStack(FaModSickleStone, 1), Strings.FAMODSICKLESTONE_DISNAME);
+        LanguageRegistry.addName(new ItemStack(FaModSickleWooden, 1), Strings.FAMODSICKLEWOODEN_DISNAME);
+
         GameRegistry.registerItem(FaModSickleStone, Strings.FAMODSICKLESTONE_NAME);
+        LanguageRegistry.addName(new ItemStack(FaModSickleStone, 1), Strings.FAMODSICKLESTONE_DISNAME);
         
-        LanguageRegistry.addName(new ItemStack(FaModSickleIron, 1), Strings.FAMODSICKLEIRON_DISNAME);
         GameRegistry.registerItem(FaModSickleIron, Strings.FAMODSICKLEIRON_NAME);
-        
-        LanguageRegistry.addName(new ItemStack(FaModSickleGolden, 1), Strings.FAMODSICKLEGOLDEN_DISNAME);
+        LanguageRegistry.addName(new ItemStack(FaModSickleIron, 1), Strings.FAMODSICKLEIRON_DISNAME);
+                
         GameRegistry.registerItem(FaModSickleGolden, Strings.FAMODSICKLEGOLDEN_NAME);
+        LanguageRegistry.addName(new ItemStack(FaModSickleGolden, 1), Strings.FAMODSICKLEGOLDEN_DISNAME);
         
-        LanguageRegistry.addName(new ItemStack(FaModSickleDiamond, 1), Strings.FAMODSICKLEDIAMOND_DISNAME);
         GameRegistry.registerItem(FaModSickleDiamond, Strings.FAMODSICKLEDIAMOND_NAME);
+        LanguageRegistry.addName(new ItemStack(FaModSickleDiamond, 1), Strings.FAMODSICKLEDIAMOND_DISNAME);
         
         
         FaModTreeAxe = new TreeAxe(Itemids.FAMODTREEAXE, EnumToolMaterial.EMERALD);
         
-        LanguageRegistry.addName(new ItemStack(FaModTreeAxe, 1), Strings.FAMODTREEAXE_DISNAME);
         GameRegistry.registerItem(FaModTreeAxe, Strings.FAMODTREEAXE_NAME);
+        LanguageRegistry.addName(new ItemStack(FaModTreeAxe, 1), Strings.FAMODTREEAXE_DISNAME);
         
         FaModManganIngot = new ManganIngot(Itemids.FAMODMANGANINGOT);
+        FaModManganDust = new ManganDust(Itemids.FAMODMANGANDUST);
         
-        LanguageRegistry.addName(new ItemStack(FaModManganIngot, 1), Strings.FAMODMANGANINGOT_DISNAME);
         GameRegistry.registerItem(FaModManganIngot, Strings.FAMODMANGANINGOT_NAME);
-        
+        LanguageRegistry.addName(new ItemStack(FaModManganIngot, 1), Strings.FAMODMANGANINGOT_DISNAME);
+        GameRegistry.registerItem(FaModManganDust, Strings.FAMODMANGANDUST_NAME);
+        LanguageRegistry.addName(new ItemStack(FaModManganDust, 1), Strings.FAMODMANGANDUST_DISNAME);
+                
         FaModManganPickAxe = new PickAxe(Itemids.FAMODMANGANPICKAXE, Materials.MANGAN);
         
-        LanguageRegistry.addName(new ItemStack(FaModManganPickAxe, 1), Strings.FAMODMANGANPICKAXE_DISNAME);
         GameRegistry.registerItem(FaModManganPickAxe, Strings.FAMODMANGANPICKAXE_NAME);
-        
+        LanguageRegistry.addName(new ItemStack(FaModManganPickAxe, 1), Strings.FAMODMANGANPICKAXE_DISNAME);
+                
         FaModManganAxe = new Axe(Itemids.FAMODMANGANAXE, Materials.MANGAN);
         
-        LanguageRegistry.addName(new ItemStack(FaModManganAxe, 1), Strings.FAMODMANGANAXE_DISNAME);
         GameRegistry.registerItem(FaModManganAxe, Strings.FAMODMANGANAXE_NAME);
-        
+        LanguageRegistry.addName(new ItemStack(FaModManganAxe, 1), Strings.FAMODMANGANAXE_DISNAME);
+                
         FaModManganSword = new Sword(Itemids.FAMODMANGANSWORD, Materials.MANGAN);
         
-        LanguageRegistry.addName(new ItemStack(FaModManganSword, 1), Strings.FAMODMANGANSWORD_DISNAME);
         GameRegistry.registerItem(FaModManganSword, Strings.FAMODMANGANSWORD_NAME);
-        
+        LanguageRegistry.addName(new ItemStack(FaModManganSword, 1), Strings.FAMODMANGANSWORD_DISNAME);
+                
         FaModShockCoal = new ShockCoal(Itemids.FAMODSHOCKCOAL);
         
-        LanguageRegistry.addName(new ItemStack(FaModShockCoal, 1), Strings.FAMODSHOCKCOAL_DISNAME);
         GameRegistry.registerItem(FaModShockCoal, Strings.FAMODSHOCKCOAL_NAME);
-
+        LanguageRegistry.addName(new ItemStack(FaModShockCoal, 1), Strings.FAMODSHOCKCOAL_DISNAME);
+        
               
 
     }
