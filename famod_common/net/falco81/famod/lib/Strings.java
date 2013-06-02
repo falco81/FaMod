@@ -29,7 +29,8 @@ public class Strings {
     public static final String FAMODSICKLEIRON_DISNAME = "Iron Sickle";
     public static final String FAMODSICKLEGOLDEN_DISNAME = "Golden Sickle";
     public static final String FAMODSICKLEDIAMOND_DISNAME = "Diamond Sickle";
-    public static final String FAMODTREEAXE_DISNAME = "Emerald Axe \u00a7cThe Wood Destroyer";
+    public static final String FAMODTREEAXE_DISNAME = "Emerald Axe";
+    public static final String FAMODTREEAXE_DISNAME_LINE2 = "\u00a7cThe Wood Destroyer";
     public static final String FAMODMANGANORE_DISNAME = "Mangan Ore";
     public static final String FAMODMANGANINGOT_DISNAME = "Mangan Ingot";
     public static final String FAMODMANGANDUST_DISNAME = "Mangan Dust";
@@ -38,9 +39,12 @@ public class Strings {
     public static final String FAMODMANGANAXE_DISNAME = "Mangan Axe";
     public static final String FAMODMANGANSWORD_DISNAME = "Mangan Sword";
     public static final String FAMODSHOCKFURNACE_DISNAME = "Shock Furnace";
-    public static final String FAMODSHOCKCOALORE_DISNAME = "Shock Coal Ore - \u00a7cunstable";
-    public static final String FAMODSHOCKCOAL_DISNAME = "Shock Coal - \u00a7cunstable";
-    public static final String FAMODSHOCKCOALBLOCK_DISNAME = "Shock Coal Block - \u00a7cvery cunstable";
+    public static final String FAMODSHOCKCOALORE_DISNAME = "Shock Coal Ore";
+    public static final String FAMODSHOCKCOALORE_DISNAME_LINE2 = "\u00a7cUnstable";
+    public static final String FAMODSHOCKCOAL_DISNAME = "Shock Coal";
+    public static final String FAMODSHOCKCOAL_DISNAME_LINE2 = "\u00a7cUnstable";
+    public static final String FAMODSHOCKCOALBLOCK_DISNAME = "Shock Coal Block";
+    public static final String FAMODSHOCKCOALBLOCK_DISNAME_LINE2 = "\u00a7cVery unstable";
     public static final String FAMODDECORBLOCK_DISNAME = "Decor Block";
     
     

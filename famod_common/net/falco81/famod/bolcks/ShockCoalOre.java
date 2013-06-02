@@ -45,6 +45,9 @@ public class ShockCoalOre extends Block {
         par6EntityPlayer.setEntityHealth(par6EntityPlayer.getHealth() - 1);
     }
 
+   
+   
+
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister myIcon) {
         blockIcon = myIcon.registerIcon(Reference.MOD_ID.toLowerCase() + ":"
