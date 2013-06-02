@@ -1,10 +1,12 @@
 package net.falco81.famond.recipes;
 
+import ic2.api.item.Items;
 import ic2.api.recipe.Recipes;
 import net.falco81.famod.bolcks.ModBlocks;
 import net.falco81.famod.items.ModItems;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Loader;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class IC2 {
     public static void initRecipes() {
@@ -20,6 +22,8 @@ public class IC2 {
                 addMaceratorIngotToDustRecipe(new ItemStack(
                         ModItems.FaModManganIngot), new ItemStack(
                         ModItems.FaModManganDust));
+                
+                GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModShockFurnace), new Object[] { "iii", "iji", "iii", Character.valueOf('i'), ModBlocks.FaModShockCoalBlock, Character.valueOf('j'), Items.getItem("mfsUnit") });
 
             }
 

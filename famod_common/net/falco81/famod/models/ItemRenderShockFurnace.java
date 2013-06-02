@@ -69,7 +69,7 @@ public class ItemRenderShockFurnace  implements IItemRenderer {
         GL11.glRotatef(180f, 0f, 1f, 0f);
          
         FMLClientHandler.instance().getClient().renderEngine.bindTexture("/mods/famod/models/ShockFurnace.png");
-         
+                 
         modelShockFurnace.render();
          
         // Re-enable Lighting Calculations

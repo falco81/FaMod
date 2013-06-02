@@ -50,7 +50,7 @@ public class CraftingRecipes {
         
         GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModDecorBlock, 1, Metadata.BASALTBRICK), new Object[] { "i", Character.valueOf('i'), ModBlocks.FaModBasaltChiseled });
         
-        GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModShockFurnace), new Object[] { "iii", "iji", "iii", Character.valueOf('i'), ModBlocks.FaModShockCoalOre, Character.valueOf('j'), Block.blockDiamond });
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModShockFurnace), new Object[] { "iii", "iji", "iii", Character.valueOf('i'), ModBlocks.FaModShockCoalBlock, Character.valueOf('j'), Block.blockDiamond });
         
     }
 }

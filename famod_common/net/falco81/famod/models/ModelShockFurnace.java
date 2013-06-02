@@ -67,6 +67,7 @@ public class ModelShockFurnace extends ModelBase {
 
     public void render(FaModTileEntity box, double x, double y, double z)
     {
+
         // Push a blank matrix onto the stack
         GL11.glPushMatrix();
      
@@ -78,7 +79,7 @@ public class ModelShockFurnace extends ModelBase {
      
         // Bind the texture, so that OpenGL properly textures our block.
         FMLClientHandler.instance().getClient().renderEngine.bindTexture("/mods/famod/models/ShockFurnace.png");
-                
+                        
      
         // Render the object, using modelTutBox.renderAll();
         this.render();

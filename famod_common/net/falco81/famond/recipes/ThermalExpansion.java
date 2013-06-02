@@ -4,7 +4,9 @@ import net.falco81.famod.bolcks.ModBlocks;
 import net.falco81.famod.items.ModItems;
 import net.minecraft.item.ItemStack;
 import thermalexpansion.api.crafting.CraftingManagers;
+import thermalexpansion.api.item.ItemRegistry;
 import cpw.mods.fml.common.Loader;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ThermalExpansion {
     public static void initRecipes() {
@@ -20,6 +22,8 @@ public class ThermalExpansion {
                 addPulverizerIngotToDustRecipe(new ItemStack(
                         ModItems.FaModManganIngot), new ItemStack(
                         ModItems.FaModManganDust));
+                
+                GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModShockFurnace), new Object[] { "iii", "iji", "iii", Character.valueOf('i'), ModBlocks.FaModShockCoalBlock, Character.valueOf('j'), ItemRegistry.getItem("energyCellFrameFull", 1) });
 
             }
 
