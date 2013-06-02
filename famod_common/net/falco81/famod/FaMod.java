@@ -11,7 +11,9 @@ import net.falco81.famod.lib.Reference;
 import net.falco81.famod.proxy.CommonProxy;
 import net.falco81.famod.worldgen.WorldGenerator;
 import net.falco81.famond.recipes.CraftingRecipes;
+import net.falco81.famond.recipes.IC2;
 import net.falco81.famond.recipes.SmeltingRecipes;
+import net.falco81.famond.recipes.ThermalExpansion;
 import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -59,6 +61,7 @@ public class FaMod {
     }
     @PostInit
     public void postInit(FMLPostInitializationEvent event) {
-        
+        ThermalExpansion.initRecipes();
+        IC2.initRecipes();
     }
 }
