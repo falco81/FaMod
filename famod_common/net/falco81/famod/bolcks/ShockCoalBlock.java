@@ -8,6 +8,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -26,7 +27,8 @@ public class ShockCoalBlock extends Block{
     @Override
     public void onBlockHarvested(World par1World, int par2, int par3, int par4,
             int par5, EntityPlayer par6EntityPlayer) {
-        par6EntityPlayer.setEntityHealth(par6EntityPlayer.getHealth()-19);
+        //par6EntityPlayer.setEntityHealth(par6EntityPlayer.getHealth()-19);
+        par6EntityPlayer.attackEntityFrom(DamageSource.generic, 5);
     }
     
     @SideOnly(Side.CLIENT)
