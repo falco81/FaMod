@@ -2,17 +2,20 @@ package net.falco81.famod.bolcks;
 
 import net.falco81.famod.FaMod;
 import net.falco81.famod.lib.FaModTileEntity;
+import net.falco81.famod.lib.Reference;
 import net.minecraft.block.BlockFurnace;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ShockFurnaceBlock extends BlockFurnace {
-
+    
     public ShockFurnaceBlock(int id) {
         // super(id, Material.rock);
+        
         super(id, false);
 
         setUnlocalizedName("shockfurnace");
@@ -47,8 +50,9 @@ public class ShockFurnaceBlock extends BlockFurnace {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister myIcon) {
-        blockIcon = null;
+    public void registerIcons(IconRegister myIcon)
+    {
+        this.blockIcon = null;
         
     }
 

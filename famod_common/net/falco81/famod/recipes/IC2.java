@@ -1,4 +1,4 @@
-package net.falco81.famond.recipes;
+package net.falco81.famod.recipes;
 
 import ic2.api.item.Items;
 import ic2.api.recipe.Recipes;

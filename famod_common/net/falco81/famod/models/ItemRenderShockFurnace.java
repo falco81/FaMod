@@ -66,7 +66,7 @@ public class ItemRenderShockFurnace  implements IItemRenderer {
          
         GL11.glTranslatef(x,  y,  z);
         GL11.glScalef(scale, scale, scale);
-        GL11.glRotatef(180f, 0f, 1f, 0f);
+        GL11.glRotatef(90, 0f, 1f, 0f);
          
         FMLClientHandler.instance().getClient().renderEngine.bindTexture("/mods/famod/models/ShockFurnace.png");
                  
