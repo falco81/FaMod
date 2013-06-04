@@ -21,6 +21,7 @@ public class Strings {
     public static final String FAMODSHOCKCOAL_NAME = "FaModShockCoal";
     public static final String FAMODSHOCKCOALBLOCK_NAME = "FaModShockCoalBlock";
     public static final String FAMODDECORBLOCK_NAME = "FaModDecorBlock";
+    public static final String FAMODVILLAGER_NAME = "FaModVillager";
 
     
     

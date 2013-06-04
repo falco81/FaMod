@@ -9,6 +9,7 @@ import net.falco81.famod.lib.Blockids;
 import net.falco81.famod.lib.Itemids;
 import net.falco81.famod.lib.Reference;
 import net.falco81.famod.lib.Strings;
+import net.falco81.famod.lib.Villagers;
 import net.falco81.famod.lib.Worldgen;
 import net.minecraftforge.common.Configuration;
 
@@ -47,6 +48,8 @@ public class ConfigurationSettings {
             Worldgen.WORLDGENSHOCKORE = configuration.get("World Generation", Strings.FAMODWORLDGENSHOCKORE_NAME, Worldgen.WORLDGENSHOCKORE_DEFAULT).getBoolean(Worldgen.WORLDGENSHOCKORE_DEFAULT);
             Worldgen.WORLDGENBASALT = configuration.get("World Generation", Strings.FAMODWORLDGENBASALT_NAME, Worldgen.WORLDGENBASALT_DEFAULT).getBoolean(Worldgen.WORLDGENBASALT_DEFAULT);
             Worldgen.WORLDGENMARBLE = configuration.get("World Generation", Strings.FAMODWORLDGENMARBLE_NAME, Worldgen.WORLDGENMARBLE_DEFAULT).getBoolean(Worldgen.WORLDGENMARBLE_DEFAULT);
+            /* Villagers configs */
+            Villagers.FAMODVILLAGER = configuration.get("Villagers", Strings.FAMODVILLAGER_NAME, Villagers.FAMODVILLAGER_DEFAULT).getInt(Villagers.FAMODVILLAGER_DEFAULT);
 
         }
         catch (Exception e) {

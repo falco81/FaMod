@@ -13,6 +13,7 @@ import net.falco81.famod.recipes.CraftingRecipes;
 import net.falco81.famod.recipes.IC2;
 import net.falco81.famod.recipes.SmeltingRecipes;
 import net.falco81.famod.recipes.ThermalExpansion;
+import net.falco81.famod.villager.FaModVillager;
 import net.falco81.famod.worldgen.WorldGenerator;
 import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
@@ -49,6 +50,7 @@ public class FaMod {
         ModItems.init();
         CraftingRecipes.initRecipes();
         SmeltingRecipes.initRecipes();
+        FaModVillager.init();
         GameRegistry.registerFuelHandler(new FaModFuelHandler());
        
     }
