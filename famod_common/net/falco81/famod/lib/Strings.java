@@ -22,6 +22,10 @@ public class Strings {
     public static final String FAMODSHOCKCOALBLOCK_NAME = "FaModShockCoalBlock";
     public static final String FAMODDECORBLOCK_NAME = "FaModDecorBlock";
     public static final String FAMODVILLAGER_NAME = "FaModVillager";
+    public static final String SHOCKFURNACECORE_NAME = "ShockFurnaceCore";
+    public static final String SHOCKFURNACEDUMMY_NAME = "ShockFurnaceDummy";
+    public static final String SHOCKFURNACECOREBLOCK_NAME = "ShockFurnaceCore";
+    public static final String SHOCKFURNACEDUMMYBLOCK_NAME = "ShockFurnaceDummy";
 
     
     
@@ -47,6 +51,8 @@ public class Strings {
     public static final String FAMODSHOCKCOALBLOCK_DISNAME = "Shock Coal Block";
     public static final String FAMODSHOCKCOALBLOCK_DISNAME_LINE2 = "\u00a7cVery unstable";
     public static final String FAMODDECORBLOCK_DISNAME = "Decor Block";
+    public static final String SHOCKFURNACECOREBLOCK_DISNAME = "Shock-Furnace Core";
+    public static final String SHOCKFURNACEDUMMYBLOCK_DISNAME = "Shock-Furnace Dummy";
     
     
     

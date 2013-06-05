@@ -14,6 +14,7 @@ public class SmeltingRecipes {
         
         FurnaceRecipes.smelting().addSmelting(ModBlocks.FaModDecorBlock.blockID ,Metadata.BASALTCOBBLE, ModBlocks.FaModBasalt, 0.5F);
         
+                
     }
 
 }

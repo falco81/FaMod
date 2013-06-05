@@ -8,6 +8,7 @@ import net.falco81.famod.creativetab.CreativeTabFaMod;
 import net.falco81.famod.items.ModItems;
 import net.falco81.famod.lib.FaModFuelHandler;
 import net.falco81.famod.lib.Reference;
+import net.falco81.famod.multiblocks.BlockManager;
 import net.falco81.famod.proxy.CommonProxy;
 import net.falco81.famod.recipes.CraftingRecipes;
 import net.falco81.famod.recipes.IC2;
@@ -26,7 +27,9 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod ( modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION )
 @NetworkMod ( clientSideRequired = true, serverSideRequired = false )
@@ -46,6 +49,7 @@ public class FaMod {
     public void preInit(FMLPreInitializationEvent event) {
         ConfigurationSettings.init(new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + Reference.CHANNEL_NAME + File.separator + Reference.MOD_ID + ".cfg"));
         
+        BlockManager.registerBlocks();
         ModBlocks.init();
         ModItems.init();
         CraftingRecipes.initRecipes();
@@ -58,7 +62,14 @@ public class FaMod {
     public void init(FMLInitializationEvent event) {   
         
         GameRegistry.registerWorldGenerator(new WorldGenerator());
-        proxy.InitRendering();
+        
+              
+        proxy.registerTileEntities();       
+        LanguageRegistry.instance().addStringLocalization("multifurnace.container.multifurnace", "Shock-Furnace");
+        
+        NetworkRegistry.instance().registerGuiHandler(this, proxy);
+        
+        
         
     }
     @PostInit

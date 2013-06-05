@@ -3,6 +3,7 @@ package net.falco81.famod.recipes;
 import net.falco81.famod.bolcks.ModBlocks;
 import net.falco81.famod.items.ModItems;
 import net.falco81.famod.lib.Metadata;
+import net.falco81.famod.multiblocks.BlockManager;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -50,7 +51,9 @@ public class CraftingRecipes {
         
         GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModDecorBlock, 1, Metadata.BASALTBRICK), new Object[] { "i", Character.valueOf('i'), ModBlocks.FaModBasaltChiseled });
         
-        GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModShockFurnace), new Object[] { "iii", "iji", "iii", Character.valueOf('i'), ModBlocks.FaModShockCoalBlock, Character.valueOf('j'), Block.blockDiamond });
+        
+        GameRegistry.addRecipe(new ItemStack(BlockManager.ShockFurnaceCore,1), new Object[] { "iii", "iji", "iii", Character.valueOf('i'), ModBlocks.FaModShockCoalBlock, Character.valueOf('j'), Block.blockDiamond });
+        
         
     }
 }

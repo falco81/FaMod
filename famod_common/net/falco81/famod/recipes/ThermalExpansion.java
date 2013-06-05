@@ -2,6 +2,7 @@ package net.falco81.famod.recipes;
 
 import net.falco81.famod.bolcks.ModBlocks;
 import net.falco81.famod.items.ModItems;
+import net.falco81.famod.multiblocks.BlockManager;
 import net.minecraft.item.ItemStack;
 import thermalexpansion.api.crafting.CraftingManagers;
 import thermalexpansion.api.item.ItemRegistry;
@@ -23,7 +24,7 @@ public class ThermalExpansion {
                         ModItems.FaModManganIngot), new ItemStack(
                         ModItems.FaModManganDust));
                 
-                GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModShockFurnace), new Object[] { "iii", "iji", "iii", Character.valueOf('i'), ModBlocks.FaModShockCoalBlock, Character.valueOf('j'), ItemRegistry.getItem("energyCellFrameFull", 1) });
+                GameRegistry.addRecipe(new ItemStack(BlockManager.ShockFurnaceCore,1), new Object[] { "iii", "iji", "iii", Character.valueOf('i'), ModBlocks.FaModShockCoalBlock, Character.valueOf('j'), ItemRegistry.getItem("energyCellFrameFull", 1) });
 
             }
 

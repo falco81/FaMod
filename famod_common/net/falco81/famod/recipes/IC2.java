@@ -4,6 +4,7 @@ import ic2.api.item.Items;
 import ic2.api.recipe.Recipes;
 import net.falco81.famod.bolcks.ModBlocks;
 import net.falco81.famod.items.ModItems;
+import net.falco81.famod.multiblocks.BlockManager;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -23,7 +24,7 @@ public class IC2 {
                         ModItems.FaModManganIngot), new ItemStack(
                         ModItems.FaModManganDust));
                 
-                GameRegistry.addRecipe(new ItemStack(ModBlocks.FaModShockFurnace), new Object[] { "iii", "iji", "iii", Character.valueOf('i'), ModBlocks.FaModShockCoalBlock, Character.valueOf('j'), Items.getItem("mfsUnit") });
+                GameRegistry.addRecipe(new ItemStack(BlockManager.ShockFurnaceCore,1), new Object[] { "iii", "iji", "iii", Character.valueOf('i'), ModBlocks.FaModShockCoalBlock, Character.valueOf('j'), Items.getItem("mfsUnit") });
 
             }
 

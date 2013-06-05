@@ -12,7 +12,6 @@ public class ModBlocks {
 
     public static Block FaModManganOre;
     public static Block FaModManganBlock;
-    public static Block FaModShockFurnace;
     public static Block FaModShockCoalOre;
     public static Block FaModShockCoalBlock;
     public static Block FaModDecorBlock;
@@ -26,7 +25,6 @@ public class ModBlocks {
         FaModManganOre = new ManganOre(Blockids.FAMODMANGANORE);
         FaModManganBlock = new ManganBlock(Blockids.FAMODMANGANBLOCK);
         
-        FaModShockFurnace = new ShockFurnaceBlock(Blockids.FAMODSHOCKFURNACE);
         FaModShockCoalOre = new ShockCoalOre(Blockids.FAMODSHOCKCOALORE);
         FaModShockCoalBlock = new ShockCoalBlock(Blockids.FAMODSHOCKCOALBLOCK);
         
@@ -39,9 +37,7 @@ public class ModBlocks {
         GameRegistry.registerBlock(FaModManganBlock, Strings.FAMODMANGANBLOCK_NAME);
         LanguageRegistry.addName(FaModManganBlock, Strings.FAMODMANGANBLOCK_DISNAME);
       
-        GameRegistry.registerBlock(FaModShockFurnace, Strings.FAMODSHOCKFURNACE_NAME);
-        LanguageRegistry.addName(FaModShockFurnace, Strings.FAMODSHOCKFURNACE_DISNAME);
-        
+       
         GameRegistry.registerBlock(FaModShockCoalOre, Strings.FAMODSHOCKCOALORE_NAME);
         LanguageRegistry.addName(FaModShockCoalOre, Strings.FAMODSHOCKCOALORE_DISNAME);
       

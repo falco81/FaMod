@@ -7,6 +7,7 @@ import cpw.mods.fml.common.FMLLog;
 
 import net.falco81.famod.lib.Blockids;
 import net.falco81.famod.lib.Itemids;
+import net.falco81.famod.lib.Multiblocks;
 import net.falco81.famod.lib.Reference;
 import net.falco81.famod.lib.Strings;
 import net.falco81.famod.lib.Villagers;
@@ -50,6 +51,9 @@ public class ConfigurationSettings {
             Worldgen.WORLDGENMARBLE = configuration.get("World Generation", Strings.FAMODWORLDGENMARBLE_NAME, Worldgen.WORLDGENMARBLE_DEFAULT).getBoolean(Worldgen.WORLDGENMARBLE_DEFAULT);
             /* Villagers configs */
             Villagers.FAMODVILLAGER = configuration.get("Villagers", Strings.FAMODVILLAGER_NAME, Villagers.FAMODVILLAGER_DEFAULT).getInt(Villagers.FAMODVILLAGER_DEFAULT);
+            /* Multiblocks configs */
+            Multiblocks.BlockIDs.ShockFurnaceCore = configuration.get("Multiblocks", Strings.SHOCKFURNACECORE_NAME, Multiblocks.BlockIDs.ShockFurnaceCore_DEFAULT).getInt(Multiblocks.BlockIDs.ShockFurnaceCore_DEFAULT);
+            Multiblocks.BlockIDs.ShockFurnaceDummy = configuration.get("Multiblocks", Strings.SHOCKFURNACEDUMMY_NAME, Multiblocks.BlockIDs.ShockFurnaceDummy_DEFAULT).getInt(Multiblocks.BlockIDs.ShockFurnaceDummy_DEFAULT);
 
         }
         catch (Exception e) {
