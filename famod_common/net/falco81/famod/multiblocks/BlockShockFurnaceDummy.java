@@ -53,6 +53,8 @@ public class BlockShockFurnaceDummy extends BlockContainer {
 
         super.breakBlock(world, x, y, z, par5, par6);
     }
+    
+   
 
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z,

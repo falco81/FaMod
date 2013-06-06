@@ -13,6 +13,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityFurnace;
+import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -233,11 +234,12 @@ public class TileEntityShockFurnaceCore extends TileEntity implements
                 flag1 = true;
                 metadata = getBlockMetadata();
                 isActive = 1;
-                metadata = (isActive << 3)
-                        | (metadata & BlockShockFurnaceCore.META_ISACTIVE);
+                /*metadata = (isActive << 3)
+                        | (metadata & BlockShockFurnaceCore.META_ISACTIVE);*/
+                             
 
-                worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord,
-                        metadata, 2);
+                worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord,metadata, 2);
+                
             }
         }
 
@@ -245,6 +247,9 @@ public class TileEntityShockFurnaceCore extends TileEntity implements
             onInventoryChanged();
     }
 
+   
+
+    
     @Override
     public int getSizeInventory() {
         return furnaceItems.length;

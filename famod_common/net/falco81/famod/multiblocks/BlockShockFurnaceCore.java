@@ -56,6 +56,8 @@ public class BlockShockFurnaceCore extends BlockContainer {
         faceIconLit = iconRegister
                 .registerIcon(Reference.MOD_ID.toLowerCase() + ":"+"shockfurnaceactive");
     }
+    
+   
 
     @Override
     public void onBlockPlacedBy(World world, int x, int y, int z,
@@ -63,8 +65,7 @@ public class BlockShockFurnaceCore extends BlockContainer {
         int metadata = 0;
         int facing = META_DIR_WEST;
 
-        int dir = MathHelper
-                .floor_double((double) (entity.rotationYaw * 4f / 360f) + 0.5) & 3;
+        int dir = MathHelper.floor_double((double) (entity.rotationYaw * 4f / 360f) + 0.5) & 3;
         if (dir == 0)
             facing = META_DIR_NORTH;
         if (dir == 1)
@@ -75,22 +76,32 @@ public class BlockShockFurnaceCore extends BlockContainer {
             facing = META_DIR_WEST;
 
         metadata |= facing;
+       
         world.setBlockMetadataWithNotify(x, y, z, metadata, 2);
+       
     }
 
     @Override
     public Icon getIcon(int side, int metadata) {
         boolean isActive = ((metadata >> 3) == 1);
         int facing = (metadata & MASK_DIR);
+        
 
         return (side == getSideFromFacing(facing) ? (isActive ? faceIconLit : faceIconUnlit) : blockIcon);
+        /*if (isActive == true) {
+            return side == getSideFromFacing(facing) ? this.faceIconLit: this.blockIcon;
+        }
+        else {
+            return side == getSideFromFacing(facing) ? this.faceIconUnlit: this.blockIcon;
+        }*/
         
-        
+                
     }
 
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z,
             EntityPlayer player, int par6, float par7, float par8, float par9) {
+       
         if (player.isSneaking())
             return false;
 
@@ -104,6 +115,7 @@ public class BlockShockFurnaceCore extends BlockContainer {
                     tileEntity.convertDummies();
                     if (world.isRemote)
                         player.sendChatToPlayer("Shock-Block Furnace Created!");
+                    
                 }
             }
 
@@ -123,7 +135,7 @@ public class BlockShockFurnaceCore extends BlockContainer {
             return;
 
         int facing = metadata & MASK_DIR;
-
+        
         double yMod = (0.3 * prng.nextDouble());
         double xMod = -0.02;
         double zMod = (0.75 - (0.5 * prng.nextDouble()));
@@ -152,6 +164,9 @@ public class BlockShockFurnaceCore extends BlockContainer {
 
         world.spawnParticle("smoke", x + xMod, y + yMod, z + zMod, 0, 0, 0);
         world.spawnParticle("flame", x + xMod, y + yMod, z + zMod, 0, 0, 0);
+        
+       
+        
     }
 
     @Override
@@ -189,6 +204,8 @@ public class BlockShockFurnaceCore extends BlockContainer {
                 return 4;
         }
     }
+    
+   
 
     private void dropItems(World world, int x, int y, int z) {
         Random prng = new Random();
