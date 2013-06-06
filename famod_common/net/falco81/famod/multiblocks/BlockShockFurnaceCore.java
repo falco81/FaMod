@@ -88,12 +88,8 @@ public class BlockShockFurnaceCore extends BlockContainer {
         
 
         return (side == getSideFromFacing(facing) ? (isActive ? faceIconLit : faceIconUnlit) : blockIcon);
-        /*if (isActive == true) {
-            return side == getSideFromFacing(facing) ? this.faceIconLit: this.blockIcon;
-        }
-        else {
-            return side == getSideFromFacing(facing) ? this.faceIconUnlit: this.blockIcon;
-        }*/
+        
+      
         
                 
     }
@@ -135,6 +131,7 @@ public class BlockShockFurnaceCore extends BlockContainer {
             return;
 
         int facing = metadata & MASK_DIR;
+      
         
         double yMod = (0.3 * prng.nextDouble());
         double xMod = -0.02;

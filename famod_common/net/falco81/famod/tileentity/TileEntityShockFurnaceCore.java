@@ -3,17 +3,15 @@ package net.falco81.famod.tileentity;
 import net.falco81.famod.bolcks.ModBlocks;
 import net.falco81.famod.multiblocks.BlockManager;
 import net.falco81.famod.multiblocks.BlockShockFurnaceCore;
-import net.minecraft.block.Block;
+import net.falco81.famod.multiblocks.ShockFurnaceRecipes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityFurnace;
-import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -29,6 +27,7 @@ public class TileEntityShockFurnaceCore extends TileEntity implements
     public int furnaceCookTime = 0;
 
     private boolean isValidMultiblock = false;
+    
 
     public TileEntityShockFurnaceCore() {
     }
@@ -41,7 +40,9 @@ public class TileEntityShockFurnaceCore extends TileEntity implements
         isValidMultiblock = false;
 
         int metadata = worldObj.getBlockMetadata(xCoord, yCoord, zCoord);
+        
         metadata = metadata & BlockShockFurnaceCore.MASK_DIR;
+
         worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, metadata, 2);
 
         furnaceBurnTime = 0;
@@ -177,7 +178,8 @@ public class TileEntityShockFurnaceCore extends TileEntity implements
                     if (blockId != BlockManager.ShockFurnaceDummy.blockID)
                         continue;
 
-                    worldObj.setBlock(x, y, z, ModBlocks.FaModShockCoalBlock.blockID);
+                    worldObj.setBlock(x, y, z,
+                            ModBlocks.FaModShockCoalBlock.blockID);
                     worldObj.markBlockForUpdate(x, y, z);
                 }
             }
@@ -202,6 +204,7 @@ public class TileEntityShockFurnaceCore extends TileEntity implements
 
         if (!this.worldObj.isRemote) {
             if (furnaceBurnTime == 0 && canSmelt()) {
+
                 currentItemBurnTime = furnaceBurnTime = TileEntityFurnace
                         .getItemBurnTime(furnaceItems[1]);
 
@@ -214,6 +217,7 @@ public class TileEntityShockFurnaceCore extends TileEntity implements
                         if (furnaceItems[1].stackSize == 0)
                             furnaceItems[1] = furnaceItems[1].getItem()
                                     .getContainerItemStack(furnaceItems[1]);
+
                     }
                 }
             }
@@ -225,31 +229,40 @@ public class TileEntityShockFurnaceCore extends TileEntity implements
                     furnaceCookTime = 0;
                     smeltItem();
                     flag1 = true;
+
                 }
             } else {
                 furnaceCookTime = 0;
+
             }
 
             if (isActive == 0 && furnaceBurnTime > 0) {
                 flag1 = true;
-                metadata = getBlockMetadata();
-                isActive = 1;
-                /*metadata = (isActive << 3)
-                        | (metadata & BlockShockFurnaceCore.META_ISACTIVE);*/
-                             
-
-                worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord,metadata, 2);
                 
             }
+
         }
 
         if (flag1)
             onInventoryChanged();
+
+        if (isActive == 1 && furnaceBurnTime <= 0) {
+            metadata = worldObj.getBlockMetadata(xCoord, yCoord, zCoord);
+            isActive = 0;
+            metadata = (metadata ^ 8);
+            worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord,
+                    metadata, 2);
+
+        } else if (furnaceBurnTime > 0) {
+            metadata = worldObj.getBlockMetadata(xCoord, yCoord, zCoord);
+            isActive = 1;
+            metadata = (metadata | 8);
+            worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord,
+                    metadata, 2);
+            
+        }
     }
 
-   
-
-    
     @Override
     public int getSizeInventory() {
         return furnaceItems.length;
@@ -327,14 +340,8 @@ public class TileEntityShockFurnaceCore extends TileEntity implements
 
     @Override
     public boolean isStackValidForSlot(int slot, ItemStack itemStack) {
-        return slot == 2 ? false : (slot == 1 ? TileEntityFurnace
-                .isItemFuel(itemStack) : true);
+        return slot == 2 ? false : (slot == 1 ? (TileEntityFurnace.isItemFuel(itemStack)) : true);
     }
-
-   
-    
-
-    
 
     @Override
     public void readFromNBT(NBTTagCompound tagCompound) {
@@ -405,7 +412,7 @@ public class TileEntityShockFurnaceCore extends TileEntity implements
         if (furnaceItems[0] == null)
             return false;
         else {
-            ItemStack itemStack = FurnaceRecipes.smelting().getSmeltingResult(
+            ItemStack itemStack = ShockFurnaceRecipes.smelting().getSmeltingResult(
                     furnaceItems[0]);
             if (itemStack == null)
                 return false;
@@ -423,7 +430,7 @@ public class TileEntityShockFurnaceCore extends TileEntity implements
 
     public void smeltItem() {
         if (canSmelt()) {
-            ItemStack itemStack = FurnaceRecipes.smelting().getSmeltingResult(
+            ItemStack itemStack = ShockFurnaceRecipes.smelting().getSmeltingResult(
                     furnaceItems[0]);
 
             if (furnaceItems[2] == null)
@@ -450,7 +457,6 @@ public class TileEntityShockFurnaceCore extends TileEntity implements
 
     @Override
     public boolean canExtractItem(int i, ItemStack itemstack, int j) {
-        return j != 0 || i != 1
-                || itemstack.itemID == Item.bucketEmpty.itemID;
+        return j != 0 || i != 1 || itemstack.itemID == Item.bucketEmpty.itemID;
     }
 }
