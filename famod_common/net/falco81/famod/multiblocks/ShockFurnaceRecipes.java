@@ -4,8 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
+
 import net.minecraft.item.ItemStack;
 
 public class ShockFurnaceRecipes {
@@ -27,7 +26,7 @@ public class ShockFurnaceRecipes {
     }
 
     private ShockFurnaceRecipes() {
-        this.addSmelting(Block.oreIron.blockID, new ItemStack(Item.ingotIron),
+   /*     this.addSmelting(Block.oreIron.blockID, new ItemStack(Item.ingotIron),
                 0.7F);
         this.addSmelting(Block.oreGold.blockID, new ItemStack(Item.ingotGold),
                 1.0F);
@@ -61,7 +60,7 @@ public class ShockFurnaceRecipes {
         this.addSmelting(Block.oreLapis.blockID, new ItemStack(Item.dyePowder,
                 1, 4), 0.2F);
         this.addSmelting(Block.oreNetherQuartz.blockID, new ItemStack(
-                Item.netherQuartz), 0.2F);
+                Item.netherQuartz), 0.2F);*/
     }
 
     /**

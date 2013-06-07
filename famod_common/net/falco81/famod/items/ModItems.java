@@ -17,6 +17,7 @@ public class ModItems {
     public static Sword FaModManganSword;
     public static ShockCoal FaModShockCoal;
     public static ManganDust FaModManganDust;
+    public static ManganRefinedIngot FaModManganRefinedIngot;
 
     public static void init() {
 
@@ -75,7 +76,10 @@ public class ModItems {
         GameRegistry.registerItem(FaModShockCoal, Strings.FAMODSHOCKCOAL_NAME);
         LanguageRegistry.addName(new ItemStack(FaModShockCoal, 1), Strings.FAMODSHOCKCOAL_DISNAME);
         
-              
+        FaModManganRefinedIngot = new ManganRefinedIngot(Itemids.FAMODMANGANREFINEDINGOT);
+        
+        GameRegistry.registerItem(FaModManganRefinedIngot, Strings.FAMODMANGANREFINEDINGOT_NAME);
+        LanguageRegistry.addName(new ItemStack(FaModManganRefinedIngot, 1), Strings.FAMODMANGANREFINEDINGOT_DISNAME);    
 
     }
 }

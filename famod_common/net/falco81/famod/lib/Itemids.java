@@ -14,6 +14,7 @@ public class Itemids {
     public static int FAMODMANGANSWORD_DEFAULT = 30509;
     public static int FAMODSHOCKCOAL_DEFAULT = 30510;
     public static int FAMODMANGANDUST_DEFAULT = 30511;
+    public static int FAMODMANGANREFINEDINGOT_DEFAULT = 30512;
     
     public static int FAMODSICKLEWOODEN;
     public static int FAMODSICKLESTONE;
@@ -27,5 +28,6 @@ public class Itemids {
     public static int FAMODMANGANSWORD;
     public static int FAMODSHOCKCOAL;
     public static int FAMODMANGANDUST;
+    public static int FAMODMANGANREFINEDINGOT;
     
 }

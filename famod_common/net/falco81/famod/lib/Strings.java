@@ -26,6 +26,7 @@ public class Strings {
     public static final String SHOCKFURNACEDUMMY_NAME = "ShockFurnaceDummy";
     public static final String SHOCKFURNACECOREBLOCK_NAME = "ShockFurnaceCore";
     public static final String SHOCKFURNACEDUMMYBLOCK_NAME = "ShockFurnaceDummy";
+    public static final String FAMODMANGANREFINEDINGOT_NAME = "FaModManganRefinedIngot";
 
     
     
@@ -53,6 +54,7 @@ public class Strings {
     public static final String FAMODDECORBLOCK_DISNAME = "Decor Block";
     public static final String SHOCKFURNACECOREBLOCK_DISNAME = "Shock-Furnace Core";
     public static final String SHOCKFURNACEDUMMYBLOCK_DISNAME = "Shock-Furnace Dummy";
+    public static final String FAMODMANGANREFINEDINGOT_DISNAME = "Mangan Refined Ingot";
     
     
     

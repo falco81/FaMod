@@ -13,11 +13,11 @@ public class SmeltingRecipes {
         FurnaceRecipes.smelting().addSmelting(ModBlocks.FaModManganOre.blockID ,0, new ItemStack(ModItems.FaModManganIngot), 0.5F);
         FurnaceRecipes.smelting().addSmelting(ModItems.FaModManganDust.itemID ,0, new ItemStack(ModItems.FaModManganIngot), 0.5F);
         FurnaceRecipes.smelting().addSmelting(ModBlocks.FaModDecorBlock.blockID ,Metadata.BASALTCOBBLE, ModBlocks.FaModBasalt, 0.5F);
-        ShockFurnaceRecipes.smelting().addSmelting(ModBlocks.FaModManganOre.blockID ,0, new ItemStack(ModItems.FaModManganIngot), 0.5F);
-        ShockFurnaceRecipes.smelting().addSmelting(ModItems.FaModManganDust.itemID ,0, new ItemStack(ModItems.FaModManganIngot), 0.5F);
-        ShockFurnaceRecipes.smelting().addSmelting(ModBlocks.FaModDecorBlock.blockID ,Metadata.BASALTCOBBLE, ModBlocks.FaModBasalt, 0.5F);
+        //ShockFurnaceRecipes.smelting().addSmelting(ModBlocks.FaModManganOre.blockID ,0, new ItemStack(ModItems.FaModManganIngot), 0.5F);
+        //ShockFurnaceRecipes.smelting().addSmelting(ModItems.FaModManganDust.itemID ,0, new ItemStack(ModItems.FaModManganIngot), 0.5F);
+        //ShockFurnaceRecipes.smelting().addSmelting(ModBlocks.FaModDecorBlock.blockID ,Metadata.BASALTCOBBLE, ModBlocks.FaModBasalt, 0.5F);
         
-        ShockFurnaceRecipes.smelting().addSmelting(ModItems.FaModManganIngot.itemID ,0, new ItemStack(ModItems.FaModManganIngot), 0.5F);
+        ShockFurnaceRecipes.smelting().addSmelting(ModItems.FaModManganIngot.itemID ,0, new ItemStack(ModItems.FaModManganRefinedIngot), 0.5F);
                 
     }
 

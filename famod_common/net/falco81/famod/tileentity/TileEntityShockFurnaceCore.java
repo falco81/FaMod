@@ -205,8 +205,7 @@ public class TileEntityShockFurnaceCore extends TileEntity implements
         if (!this.worldObj.isRemote) {
             if (furnaceBurnTime == 0 && canSmelt()) {
 
-                currentItemBurnTime = furnaceBurnTime = TileEntityFurnace
-                        .getItemBurnTime(furnaceItems[1]);
+                currentItemBurnTime = furnaceBurnTime = TileEntityFurnace.getItemBurnTime(furnaceItems[1]);
 
                 if (furnaceBurnTime > 0) {
                     flag1 = true;
@@ -390,6 +389,8 @@ public class TileEntityShockFurnaceCore extends TileEntity implements
             tagCompound.setTag("Items", itemsList);
         }
     }
+    
+    
 
     @SideOnly(Side.CLIENT)
     public int getCookProgressScaled(int scaleVal) {
