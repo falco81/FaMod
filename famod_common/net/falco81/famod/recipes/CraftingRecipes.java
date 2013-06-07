@@ -54,6 +54,8 @@ public class CraftingRecipes {
         
         GameRegistry.addRecipe(new ItemStack(BlockManager.ShockFurnaceCore,1), new Object[] { "iii", "iji", "iii", Character.valueOf('i'), ModBlocks.FaModShockCoalBlock, Character.valueOf('j'), Block.blockDiamond });
         
+        GameRegistry.addRecipe(new ItemStack(ModItems.FaModSmeltingEye), new Object[] { "iii", "iji", "iii", Character.valueOf('i'), ModItems.FaModManganRefinedIngot, Character.valueOf('j'), ModBlocks.FaModShockCoalBlock });
+        
         
     }
 }

@@ -15,6 +15,7 @@ public class Itemids {
     public static int FAMODSHOCKCOAL_DEFAULT = 30510;
     public static int FAMODMANGANDUST_DEFAULT = 30511;
     public static int FAMODMANGANREFINEDINGOT_DEFAULT = 30512;
+    public static int FAMODSMELTINGEYE_DEFAULT = 30513;
     
     public static int FAMODSICKLEWOODEN;
     public static int FAMODSICKLESTONE;
@@ -29,5 +30,6 @@ public class Itemids {
     public static int FAMODSHOCKCOAL;
     public static int FAMODMANGANDUST;
     public static int FAMODMANGANREFINEDINGOT;
+    public static int FAMODSMELTINGEYE;
     
 }

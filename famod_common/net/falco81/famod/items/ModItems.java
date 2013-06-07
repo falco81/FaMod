@@ -18,6 +18,7 @@ public class ModItems {
     public static ShockCoal FaModShockCoal;
     public static ManganDust FaModManganDust;
     public static ManganRefinedIngot FaModManganRefinedIngot;
+    public static SmeltingEye FaModSmeltingEye;
 
     public static void init() {
 
@@ -79,7 +80,12 @@ public class ModItems {
         FaModManganRefinedIngot = new ManganRefinedIngot(Itemids.FAMODMANGANREFINEDINGOT);
         
         GameRegistry.registerItem(FaModManganRefinedIngot, Strings.FAMODMANGANREFINEDINGOT_NAME);
-        LanguageRegistry.addName(new ItemStack(FaModManganRefinedIngot, 1), Strings.FAMODMANGANREFINEDINGOT_DISNAME);    
+        LanguageRegistry.addName(new ItemStack(FaModManganRefinedIngot, 1), Strings.FAMODMANGANREFINEDINGOT_DISNAME);
+        
+        FaModSmeltingEye = new SmeltingEye(Itemids.FAMODSMELTINGEYE, Materials.REFINEDMANGAN);
+        
+        GameRegistry.registerItem(FaModSmeltingEye, Strings.FAMODSMELTINGEYE_NAME);
+        LanguageRegistry.addName(new ItemStack(FaModSmeltingEye, 1), Strings.FAMODSMELTINGEYE_DISNAME);
 
     }
 }

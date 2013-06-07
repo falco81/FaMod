@@ -27,6 +27,7 @@ public class Strings {
     public static final String SHOCKFURNACECOREBLOCK_NAME = "ShockFurnaceCore";
     public static final String SHOCKFURNACEDUMMYBLOCK_NAME = "ShockFurnaceDummy";
     public static final String FAMODMANGANREFINEDINGOT_NAME = "FaModManganRefinedIngot";
+    public static final String FAMODSMELTINGEYE_NAME = "FaModSmeltingEye";
 
     
     
@@ -36,7 +37,7 @@ public class Strings {
     public static final String FAMODSICKLEGOLDEN_DISNAME = "Golden Sickle";
     public static final String FAMODSICKLEDIAMOND_DISNAME = "Diamond Sickle";
     public static final String FAMODTREEAXE_DISNAME = "Emerald Axe";
-    public static final String FAMODTREEAXE_DISNAME_LINE2 = "\u00a7cThe Wood Destroyer";
+    public static final String FAMODTREEAXE_DISNAME_LINE2 = "\u00a7c\u00A7oThe Wood Destroyer";
     public static final String FAMODMANGANORE_DISNAME = "Mangan Ore";
     public static final String FAMODMANGANINGOT_DISNAME = "Mangan Ingot";
     public static final String FAMODMANGANDUST_DISNAME = "Mangan Dust";
@@ -46,15 +47,17 @@ public class Strings {
     public static final String FAMODMANGANSWORD_DISNAME = "Mangan Sword";
     public static final String FAMODSHOCKFURNACE_DISNAME = "Shock Furnace";
     public static final String FAMODSHOCKCOALORE_DISNAME = "Shock Coal Ore";
-    public static final String FAMODSHOCKCOALORE_DISNAME_LINE2 = "\u00a7cUnstable";
+    public static final String FAMODSHOCKCOALORE_DISNAME_LINE2 = "\u00a7c\u00A7oUnstable";
     public static final String FAMODSHOCKCOAL_DISNAME = "Shock Coal";
-    public static final String FAMODSHOCKCOAL_DISNAME_LINE2 = "\u00a7cUnstable";
+    public static final String FAMODSHOCKCOAL_DISNAME_LINE2 = "\u00A7c\u00A7oUnstable";
     public static final String FAMODSHOCKCOALBLOCK_DISNAME = "Shock Coal Block";
-    public static final String FAMODSHOCKCOALBLOCK_DISNAME_LINE2 = "\u00a7cVery unstable";
+    public static final String FAMODSHOCKCOALBLOCK_DISNAME_LINE2 = "\u00a7c\u00A7oVery unstable";
     public static final String FAMODDECORBLOCK_DISNAME = "Decor Block";
     public static final String SHOCKFURNACECOREBLOCK_DISNAME = "Shock-Furnace Core";
     public static final String SHOCKFURNACEDUMMYBLOCK_DISNAME = "Shock-Furnace Dummy";
     public static final String FAMODMANGANREFINEDINGOT_DISNAME = "Mangan Refined Ingot";
+    public static final String FAMODSMELTINGEYE_DISNAME = "Smelting Eye";
+    public static final String FAMODSMELTINGEYE_DISNAME_LINE2 = "\u00A7b\u00A7oStone is better";
     
     
     

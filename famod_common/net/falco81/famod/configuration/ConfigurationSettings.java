@@ -45,6 +45,7 @@ public class ConfigurationSettings {
             Itemids.FAMODSHOCKCOAL = configuration.getItem(Strings.FAMODSHOCKCOAL_NAME, Itemids.FAMODSHOCKCOAL_DEFAULT).getInt(Itemids.FAMODSHOCKCOAL_DEFAULT);
             Itemids.FAMODMANGANDUST = configuration.getItem(Strings.FAMODMANGANDUST_NAME, Itemids.FAMODMANGANDUST_DEFAULT).getInt(Itemids.FAMODMANGANDUST_DEFAULT);
             Itemids.FAMODMANGANREFINEDINGOT = configuration.getItem(Strings.FAMODMANGANREFINEDINGOT_NAME, Itemids.FAMODMANGANREFINEDINGOT_DEFAULT).getInt(Itemids.FAMODMANGANREFINEDINGOT_DEFAULT);
+            Itemids.FAMODSMELTINGEYE = configuration.getItem(Strings.FAMODSMELTINGEYE_NAME, Itemids.FAMODSMELTINGEYE_DEFAULT).getInt(Itemids.FAMODSMELTINGEYE_DEFAULT);
             /* Worldgen configs */
             Worldgen.WORLDGENMANGAN = configuration.get("World Generation", Strings.FAMODWORLDGENMANGAN_NAME, Worldgen.WORLDGENMANGAN_DEFAULT).getBoolean(Worldgen.WORLDGENMANGAN_DEFAULT);
             Worldgen.WORLDGENSHOCKORE = configuration.get("World Generation", Strings.FAMODWORLDGENSHOCKORE_NAME, Worldgen.WORLDGENSHOCKORE_DEFAULT).getBoolean(Worldgen.WORLDGENSHOCKORE_DEFAULT);
