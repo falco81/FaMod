@@ -6,11 +6,11 @@ import net.falco81.famod.bolcks.ModBlocks;
 import net.falco81.famod.configuration.ConfigurationSettings;
 import net.falco81.famod.creativetab.CreativeTabFaMod;
 import net.falco81.famod.items.ModItems;
-import net.falco81.famod.lib.FaModFuelHandler;
 import net.falco81.famod.lib.Reference;
 import net.falco81.famod.multiblocks.BlockManager;
 import net.falco81.famod.proxy.CommonProxy;
 import net.falco81.famod.recipes.CraftingRecipes;
+import net.falco81.famod.recipes.FuelHandler;
 import net.falco81.famod.recipes.IC2;
 import net.falco81.famod.recipes.SmeltingRecipes;
 import net.falco81.famod.recipes.ThermalExpansion;
@@ -55,7 +55,7 @@ public class FaMod {
         CraftingRecipes.initRecipes();
         SmeltingRecipes.initRecipes();
         FaModVillager.init();
-        GameRegistry.registerFuelHandler(new FaModFuelHandler());
+        GameRegistry.registerFuelHandler(new FuelHandler());
        
     }
     @Init

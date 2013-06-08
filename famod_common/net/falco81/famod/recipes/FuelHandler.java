@@ -14,9 +14,9 @@ public class FuelHandler implements IFuelHandler  {
         if(var1 == Item.book.itemID){
             return 300;
         }else if(var1 == ModItems.FaModShockCoal.itemID){
-            return 40000;
+            return 30000;
         }else if(var1 == ModBlocks.FaModShockCoalBlock.blockID){
-            return 360000;
+            return 270000;
         }else{
             return 0;
         }
