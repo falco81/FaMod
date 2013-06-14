@@ -26,6 +26,10 @@ public class WorldGenerator implements IWorldGenerator {
             case 1:
                 generateEnd(world, random, chunkX * 16, chunkZ * 16);
                 break;
+            default:
+                // Ostatni svety - mystcraft
+                generateSurface(world, random, chunkX * 16, chunkZ * 16);
+                break;
         }
     }
 
