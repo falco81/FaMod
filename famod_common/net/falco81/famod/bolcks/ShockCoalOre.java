@@ -53,7 +53,7 @@ public class ShockCoalOre extends Block {
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister myIcon) {
         blockIcon = myIcon.registerIcon(Reference.MOD_ID.toLowerCase() + ":"
-                + this.getUnlocalizedName2().toLowerCase());
+                + this.getUnlocalizedName().toLowerCase().replaceAll("tile.", ""));
     }
 
 }

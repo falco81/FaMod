@@ -66,7 +66,7 @@ public class TreeAxe extends ItemAxe {
         return false;
     }
 
-    @Override
+  //  @Override
     public boolean onBlockDestroyed(ItemStack par1ItemStack, World par2World,
             int par3, int par4, int par5, int par6,
             EntityLiving par7EntityLiving) {
@@ -85,8 +85,8 @@ public class TreeAxe extends ItemAxe {
     }
 
     public String getItemDisplayName(ItemStack par1ItemStack) {
-        return ("" + StringTranslate.getInstance().translateNamedKey(
-                this.getLocalizedName(par1ItemStack))).trim();
+        //return ("" + StringTranslate.getInstance().translateNamedKey(this.getUnlocalizedName(par1ItemStack))).trim();
+        return ("" + this.getUnlocalizedName(par1ItemStack)).trim();
     }
 
     @SideOnly(Side.CLIENT)

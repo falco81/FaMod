@@ -113,7 +113,7 @@ public class TileEntityShockFurnaceDummy extends TileEntity implements
     public void closeChest() {
     }
 
-    @Override
+   // @Override
     public boolean isStackValidForSlot(int i, ItemStack itemstack) {
         // TODO Auto-generated method stub
         return tileEntityCore.isStackValidForSlot(i, itemstack);
@@ -135,4 +135,10 @@ public class TileEntityShockFurnaceDummy extends TileEntity implements
     public boolean canExtractItem(int i, ItemStack itemstack, int j) {
         return tileEntityCore.canExtractItem(i, itemstack, j);
     }
+
+	@Override
+	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

@@ -59,7 +59,7 @@ public class BlockShockFurnaceCore extends BlockContainer {
     
    
 
-    @Override
+   // @Override
     public void onBlockPlacedBy(World world, int x, int y, int z,
             EntityLiving entity, ItemStack itemStack) {
         int metadata = 0;
@@ -110,7 +110,7 @@ public class BlockShockFurnaceCore extends BlockContainer {
                 if (tileEntity.checkIfProperlyFormed()) {
                     tileEntity.convertDummies();
                     if (world.isRemote)
-                        player.sendChatToPlayer("Shock-Block Furnace Created!");
+                        player.addChatMessage("Shock-Block Furnace Created!");
                     
                 }
             }

@@ -34,7 +34,7 @@ public class GuiShockFurnace extends GuiContainer {
             int par3) {
         GL11.glColor4f(1f, 1f, 1f, 1f);
 
-        mc.renderEngine.bindTexture("/gui/furnace.png");
+        //mc.renderEngine.bindTexture("/gui/furnace.png");
 
         int x = (width - xSize) / 2;
         int y = (height - ySize) / 2;

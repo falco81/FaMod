@@ -15,8 +15,7 @@ import net.minecraft.tileentity.TileEntityFurnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TileEntityShockFurnaceCore extends TileEntity implements
-        ISidedInventory {
+public class TileEntityShockFurnaceCore extends TileEntity implements ISidedInventory {
     private static final int[] sidedSlotSides = new int[] { 0 };
     private static final int[] sidedSlotBottom = new int[] { 2, 1 };
     private static final int[] sidedSlotTop = new int[] { 1 };
@@ -337,7 +336,7 @@ public class TileEntityShockFurnaceCore extends TileEntity implements
     public void closeChest() {
     }
 
-    @Override
+    //@Override
     public boolean isStackValidForSlot(int slot, ItemStack itemStack) {
         return slot == 2 ? false : (slot == 1 ? (TileEntityFurnace.isItemFuel(itemStack)) : true);
     }
@@ -460,4 +459,10 @@ public class TileEntityShockFurnaceCore extends TileEntity implements
     public boolean canExtractItem(int i, ItemStack itemstack, int j) {
         return j != 0 || i != 1 || itemstack.itemID == Item.bucketEmpty.itemID;
     }
+
+	@Override
+	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

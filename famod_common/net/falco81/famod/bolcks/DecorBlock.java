@@ -36,9 +36,7 @@ public class DecorBlock extends Block {
     public void registerIcons(IconRegister myIcon) {
         icons = new Icon[Strings.DECOR.length];
         for (int i = 0; i < Strings.DECOR.length; i++) {
-            icons[i] = myIcon.registerIcon(Reference.MOD_ID.toLowerCase() + ":"
-                    + this.getUnlocalizedName2().toLowerCase()
-                    + Strings.DECOR[i].toLowerCase());
+            icons[i] = myIcon.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName().toLowerCase().replaceAll("tile.", "")+ Strings.DECOR[i].toLowerCase());
         }
     }
     

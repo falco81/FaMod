@@ -64,7 +64,7 @@ public boolean onBlockStartBreak(ItemStack itemstack, int x, int y, int z, Entit
     return false;
 }
 
-@Override
+//@Override
 public boolean onBlockDestroyed(ItemStack par1ItemStack, World par2World, int par3, int par4, int par5, int par6, EntityLiving par7EntityLiving) {
     return true;
 }

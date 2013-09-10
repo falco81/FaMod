@@ -10,7 +10,7 @@
     "falco81"
   ],
   "credits": "All of you lovely modders out there!",
-  "logoFile": "/mods/famod/textures/logo/logo.png",
+  "logoFile": "assets/famod/textures/logo/logo.png",
   "screenshots": [
   ],
   "parent":"",
