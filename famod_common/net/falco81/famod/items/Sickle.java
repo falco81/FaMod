@@ -1,18 +1,18 @@
 package net.falco81.famod.items;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.falco81.famod.FaMod;
 import net.falco81.famod.lib.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.world.World;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class Sickle extends ItemTool{
     private static Block[] blocksEffectiveAgainst = new Block[] { Block.leaves,
@@ -64,11 +64,16 @@ public boolean onBlockStartBreak(ItemStack itemstack, int x, int y, int z, Entit
     return false;
 }
 
-//@Override
-public boolean onBlockDestroyed(ItemStack par1ItemStack, World par2World, int par3, int par4, int par5, int par6, EntityLiving par7EntityLiving) {
+@Override
+public boolean onBlockDestroyed(ItemStack par1ItemStack, World par2World, int par3, int par4, int par5, int par6, EntityLivingBase par7EntityLivingBase)
+{
+//    if ((double)Block.blocksList[par3].getBlockHardness(par2World, par4, par5, par6) != 0.0D)
+//    {
+//        par1ItemStack.damageItem(1, par7EntityLivingBase);
+//    }
+
     return true;
 }
-
 
 
 
