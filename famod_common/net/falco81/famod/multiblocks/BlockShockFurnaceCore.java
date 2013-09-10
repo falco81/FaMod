@@ -10,7 +10,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -59,10 +59,9 @@ public class BlockShockFurnaceCore extends BlockContainer {
     
    
 
-   // @Override
-    public void onBlockPlacedBy(World world, int x, int y, int z,
-            EntityLiving entity, ItemStack itemStack) {
-        int metadata = 0;
+    @Override
+    public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack itemStack) {
+            int metadata = 0;
         int facing = META_DIR_WEST;
 
         int dir = MathHelper.floor_double((double) (entity.rotationYaw * 4f / 360f) + 0.5) & 3;
