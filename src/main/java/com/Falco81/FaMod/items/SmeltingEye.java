@@ -62,7 +62,7 @@ public class SmeltingEye extends ItemTool {
 		
 		if (!player.isSneaking()) {
 			if (blocktype == Blocks.COBBLESTONE) {
-				player.sendMessage(new TextComponentTranslation("Transmute..", new Object[0]));
+				//player.sendMessage(new TextComponentTranslation("Transmute..", new Object[0]));
 			     for (int i = pos.getX() - 1; i <= pos.getX() + 1; i++) {
 		                for (int j = pos.getY() - 1; j <= pos.getY() + 1; j++) {
 		                    for (int k = pos.getZ() - 1; k <= pos.getZ() + 1; k++) {
@@ -90,13 +90,16 @@ public class SmeltingEye extends ItemTool {
 		}else
 		{
 			if (blocktype == Blocks.COBBLESTONE) {
-		}
-			player.sendMessage(new TextComponentTranslation("Transmute..", new Object[0]));
-			player.world.setBlockState(pos, Blocks.STONE.getDefaultState());
-			itemstack.damageItem(1, player);
-			worldIn.playSound(player, pos, SoundEvents.ITEM_FLINTANDSTEEL_USE, SoundCategory.BLOCKS, 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
-		    player.swingArm(hand);
-			return EnumActionResult.SUCCESS;
+				//player.sendMessage(new TextComponentTranslation("Transmute..", new Object[0]));
+				player.world.setBlockState(pos, Blocks.STONE.getDefaultState());
+				itemstack.damageItem(1, player);
+				worldIn.playSound(player, pos, SoundEvents.ITEM_FLINTANDSTEEL_USE, SoundCategory.BLOCKS, 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
+			    player.swingArm(hand);
+				return EnumActionResult.SUCCESS;
+			}
+			else {
+	        	return EnumActionResult.FAIL;
+	        }
 		}
 
 	}	
