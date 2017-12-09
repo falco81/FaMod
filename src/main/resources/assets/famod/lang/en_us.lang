@@ -1,0 +1,11 @@
+# Items
+item.ingot_mangan.name=Mangan Ingot
+item.dust_mangan.name=Mangan Dust
+item.mangan_axe.name=Mangan Axe
+item.mangan_pickaxe.name=Mangan Pickaxe
+
+# Blocks
+tile.ore_mangan.name=Mangan Ore
+
+# Others
+itemGroup.famod=FaMod

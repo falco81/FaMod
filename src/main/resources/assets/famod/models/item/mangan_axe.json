@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "famod:items/famod_mangan_axe"
+    }
+}
