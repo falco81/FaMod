@@ -25,6 +25,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.client.FMLClientHandler;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class SmeltingEye extends ItemTool {
@@ -51,6 +53,15 @@ public class SmeltingEye extends ItemTool {
 		super.setCreativeTab(FaMod.creativeTab);
 		return this;
 	}
+	
+	@SideOnly(Side.CLIENT)
+    @Override
+    public boolean hasEffect(ItemStack stack)
+    {
+        return true;
+    }
+	
+
 	
 	@Override
 	public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand,

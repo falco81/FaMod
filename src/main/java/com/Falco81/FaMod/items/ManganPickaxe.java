@@ -9,6 +9,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
@@ -39,6 +40,13 @@ public class ManganPickaxe extends ItemPickaxe{
 		return this;
 	}
 	
-	
-	
+	@Override
+	public float getDestroySpeed(ItemStack stack, IBlockState state) {
+		if (state.getBlock() == Blocks.OBSIDIAN) {
+			return 150.0F;
+		}
+		else {
+			return super.getDestroySpeed(stack, state);
+		}
+	}
 }

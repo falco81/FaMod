@@ -1,10 +1,13 @@
 package com.Falco81.FaMod.items;
 
+import java.awt.Color;
+
 import com.Falco81.FaMod.FaMod;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,6 +18,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -97,7 +101,12 @@ public class ManganAxe extends ItemAxe {
         return super.onBlockStartBreak(stack, pos, player);
      }
 	
-	
+	 @SideOnly(Side.CLIENT)
+	 @Override
+	 public void addInformation(ItemStack stack, World worldIn, java.util.List<String> tooltip, ITooltipFlag flagIn) {
+		 tooltip.add(TextFormatting.RED + "Warning: Wood Destroyer!!!");
+		 super.addInformation(stack, worldIn, tooltip, flagIn);  
+	 }	
 		
 	
 }

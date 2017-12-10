@@ -19,8 +19,8 @@ public class Materials {
 
 		// SmeltingEye material
 		final int smeltingeye_harvestLevel = 0 ;
-		final int smeltingeye_durability = 59 ;
-		final float smeltingeye_miningSpeed = 1.0F ;
+		final int smeltingeye_durability = 64 ;
+		final float smeltingeye_miningSpeed = 0.0F ;
 		final float smeltingeye_damageVsEntities = 0.0F ;
 		final int smeltingeye_enchantability = 0 ;
 		smeltingeyeMaterial = EnumHelper.addToolMaterial("SMELTINGEYE", smeltingeye_harvestLevel, smeltingeye_durability, smeltingeye_miningSpeed, smeltingeye_damageVsEntities, smeltingeye_enchantability);
