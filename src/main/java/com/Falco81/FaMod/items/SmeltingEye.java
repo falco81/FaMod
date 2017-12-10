@@ -35,7 +35,7 @@ public class SmeltingEye extends ItemTool {
 		    final int WOOD_HARDNESS_LEVEL = 0;
 		    final int STONE_HARDNESS_LEVEL = 0;
 		    this.setHarvestLevel("axe", WOOD_HARDNESS_LEVEL);  // default.  can also be set when creating the block instance, which is typically what vanilla does
-		    this.setHarvestLevel("pickaxe", STONE_HARDNESS_LEVEL);  // can add hardness level for as many or few ToolClasses as you want; new ToolClasses also possible
+		    this.setHarvestLevel("pickaxe", STONE_HARDNESS_LEVEL);  // can add hardness level for as many or few ToolClasses as you want; new ToolClasses also possible    
 			this.name = name;
 			setRegistryName(name);
 			setUnlocalizedName(name);
@@ -61,7 +61,7 @@ public class SmeltingEye extends ItemTool {
 		//player.sendMessage(new TextComponentTranslation("Block: " + blocktype + " x:"+pos.getX()+" y: "+pos.getY()+" z: "+pos.getZ(), new Object[0]));
 		
 		if (!player.isSneaking()) {
-			if (blocktype == Blocks.COBBLESTONE) {
+			if (blocktype == Blocks.COBBLESTONE || blocktype == Blocks.SAND) {
 				//player.sendMessage(new TextComponentTranslation("Transmute..", new Object[0]));
 			     for (int i = pos.getX() - 1; i <= pos.getX() + 1; i++) {
 		                for (int j = pos.getY() - 1; j <= pos.getY() + 1; j++) {
@@ -70,8 +70,10 @@ public class SmeltingEye extends ItemTool {
 		                    	if (blocktypec == Blocks.COBBLESTONE) {
 		                        	player.world.setBlockState(new BlockPos(i,j,k), Blocks.STONE.getDefaultState());
 		                        	itemstack.damageItem(1, player);
-		                       
-
+		                        }
+		                    	if (blocktypec == Blocks.SAND) {
+		                        	player.world.setBlockState(new BlockPos(i,j,k), Blocks.GLASS.getDefaultState());
+		                        	itemstack.damageItem(1, player);
 		                        }
 		                    }
 		                }
@@ -89,9 +91,14 @@ public class SmeltingEye extends ItemTool {
 			
 		}else
 		{
-			if (blocktype == Blocks.COBBLESTONE) {
+			if (blocktype == Blocks.COBBLESTONE || blocktype == Blocks.SAND) {
 				//player.sendMessage(new TextComponentTranslation("Transmute..", new Object[0]));
-				player.world.setBlockState(pos, Blocks.STONE.getDefaultState());
+				if (blocktype == Blocks.COBBLESTONE) {
+					player.world.setBlockState(pos, Blocks.STONE.getDefaultState());
+				}
+				if (blocktype == Blocks.SAND) {
+					player.world.setBlockState(pos, Blocks.GLASS.getDefaultState());
+				}
 				itemstack.damageItem(1, player);
 				worldIn.playSound(player, pos, SoundEvents.ITEM_FLINTANDSTEEL_USE, SoundCategory.BLOCKS, 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
 			    player.swingArm(hand);

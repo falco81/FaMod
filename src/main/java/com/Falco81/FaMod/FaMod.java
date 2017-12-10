@@ -14,6 +14,7 @@ import com.Falco81.FaMod.init.OreDictionary;
 import com.Falco81.FaMod.init.WorldGen;
 import com.Falco81.FaMod.proxy.CommonProxy;
 import com.Falco81.FaMod.utils.FurnaceFuelBurnTimeEventHandler;
+import com.Falco81.FaMod.utils.Materials;
 import com.Falco81.FaMod.utils.ModChecker;
 
 import net.minecraftforge.common.MinecraftForge;
@@ -44,7 +45,8 @@ public class FaMod {
 	public static final String version = "1.0.0";
 	public static final String accepted_versions = "[1.12.2]";
 	public static final CreativeTab creativeTab = new CreativeTab();
-	public static final Item.ToolMaterial manganToolMaterial = EnumHelper.addToolMaterial("MANGAN", 2, 500, 6, 2, 14);
+//	public static final Item.ToolMaterial manganToolMaterial = EnumHelper.addToolMaterial("MANGAN", 3, 1561, 8, 3, 22);
+//	public static final Item.ToolMaterial smeltingeyeMaterial = EnumHelper.addToolMaterial("SMELTINGEYE", 0, 59, 1, 0, 0);
 	public static final Logger logger = LogManager.getFormatterLogger(modId);
 		
 	@Mod.Instance(modId)
@@ -61,6 +63,7 @@ public class FaMod {
 		GameRegistry.registerWorldGenerator(new WorldGen(), 3);
 		modchecker = new ModChecker();
 		modchecker.prinSuccessMessage();
+		Materials.registerMaterials();
 		MinecraftForge.EVENT_BUS.register(FurnaceFuelBurnTimeEventHandler.instance);
 	}
 

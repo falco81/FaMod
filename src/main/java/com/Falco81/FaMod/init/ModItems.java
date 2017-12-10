@@ -7,6 +7,7 @@ import com.Falco81.FaMod.items.ManganIngot;
 import com.Falco81.FaMod.items.ManganPickaxe;
 import com.Falco81.FaMod.items.ShockCoal;
 import com.Falco81.FaMod.items.SmeltingEye;
+import com.Falco81.FaMod.utils.Materials;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -18,10 +19,10 @@ public class ModItems {
 	
 	public static ManganIngot ingotMangan = new ManganIngot("ingot_mangan", "ingotMangan").setCreativeTab(FaMod.creativeTab);
 	public static ManganDust dustMangan = new ManganDust("dust_mangan", "dustMangan").setCreativeTab(FaMod.creativeTab);
-	public static ManganAxe manganAxe = new ManganAxe(FaMod.manganToolMaterial, "mangan_axe");
-	public static ManganPickaxe manganPickaxe = new ManganPickaxe(FaMod.manganToolMaterial, "mangan_pickaxe");
+	public static ManganAxe manganAxe = new ManganAxe(Materials.manganToolMaterial, "mangan_axe").setCreativeTab(FaMod.creativeTab);;
+	public static ManganPickaxe manganPickaxe = new ManganPickaxe(Materials.manganToolMaterial, "mangan_pickaxe").setCreativeTab(FaMod.creativeTab);;
 	public static ShockCoal coalShock = new ShockCoal("coal_shock", "coalShock").setCreativeTab(FaMod.creativeTab);
-	public static SmeltingEye smeltingEye = new SmeltingEye(FaMod.manganToolMaterial, "smelting_eye").setCreativeTab(FaMod.creativeTab);
+	public static SmeltingEye smeltingEye = new SmeltingEye(Materials.smeltingeyeMaterial, "smelting_eye").setCreativeTab(FaMod.creativeTab);
 
 
 	public static void register(IForgeRegistry<Item> registry) {
