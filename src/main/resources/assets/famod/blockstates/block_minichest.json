@@ -1,0 +1,10 @@
+{
+      "variants": {
+        "normal": {
+            "model": "famod:block_inventory_minichest_model"
+        },
+        "inventory": {
+            "model": "famod:block_inventory_minichest_model"
+        }
+    }
+}

@@ -13,7 +13,9 @@ tile.block_mangan.name=Mangan Block
 tile.ore_shockcoal.name=Shock Coal Ore
 tile.block_shockcoal.name=Shock Coal Block
 tile.block_shockfurnace.name=Shock Furnace
+tile.block_minichest.name=Mini Chest
 
 # Others
 itemGroup.famod=FaMod
 container.famod_inventory_shockfurnace.name=Shock Furnace
+container.famod_inventory_minichest.name=Mini Chest

@@ -2,6 +2,7 @@ package com.Falco81.FaMod.init;
 
 import com.Falco81.FaMod.blocks.ManganBlock;
 import com.Falco81.FaMod.blocks.ManganOre;
+import com.Falco81.FaMod.blocks.MiniChest;
 import com.Falco81.FaMod.blocks.ShockCoalBlock;
 import com.Falco81.FaMod.blocks.ShockCoalOre;
 import com.Falco81.FaMod.blocks.ShockFurnace;
@@ -17,6 +18,7 @@ public class ModBlocks {
 	public static ShockCoalOre oreShockCoal = new ShockCoalOre("ore_shockcoal", "oreShockCoal").setCreativeTab(CreativeTabs.MATERIALS);
 	public static ShockCoalBlock blockShockCoal = new ShockCoalBlock("block_shockcoal").setCreativeTab(CreativeTabs.MATERIALS);
 	public static ShockFurnace blockShockFurnace = new ShockFurnace("block_shockfurnace").setCreativeTab(CreativeTabs.MATERIALS);
+	public static MiniChest blockMiniChest = new MiniChest("block_minichest").setCreativeTab(CreativeTabs.MATERIALS);
 	
 	public static void register(IForgeRegistry<Block> registry) {
 		registry.registerAll(oreMangan);
@@ -24,6 +26,7 @@ public class ModBlocks {
 		registry.registerAll(blockShockCoal);
 		registry.registerAll(blockShockFurnace);
 		registry.registerAll(blockMangan);
+		registry.registerAll(blockMiniChest);
 	}
 	
 	public static void registerItemBlocks(IForgeRegistry<Item> registry) {
@@ -32,6 +35,7 @@ public class ModBlocks {
 		registry.registerAll(blockShockCoal.createItemBlock());
 		registry.registerAll(blockShockFurnace.createItemBlock());
 		registry.registerAll(blockMangan.createItemBlock());
+		registry.registerAll(blockMiniChest.createItemBlock());
 	}
 	
 	public static void registerModels() {
@@ -40,5 +44,6 @@ public class ModBlocks {
 		blockShockCoal.registerItemModel(Item.getItemFromBlock(blockShockCoal));
 		blockShockFurnace.registerItemModel(Item.getItemFromBlock(blockShockFurnace));
 		blockMangan.registerItemModel(Item.getItemFromBlock(blockMangan));
+		blockMiniChest.registerItemModel(Item.getItemFromBlock(blockMiniChest));
 	}
 }
