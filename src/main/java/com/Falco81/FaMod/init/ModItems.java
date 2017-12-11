@@ -5,6 +5,7 @@ import com.Falco81.FaMod.items.ManganAxe;
 import com.Falco81.FaMod.items.ManganDust;
 import com.Falco81.FaMod.items.ManganIngot;
 import com.Falco81.FaMod.items.ManganPickaxe;
+import com.Falco81.FaMod.items.ManganRefinedIngot;
 import com.Falco81.FaMod.items.ShockCoal;
 import com.Falco81.FaMod.items.SmeltingEye;
 import com.Falco81.FaMod.utils.Materials;
@@ -18,6 +19,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class ModItems {
 	
 	public static ManganIngot ingotMangan = new ManganIngot("ingot_mangan", "ingotMangan").setCreativeTab(FaMod.creativeTab);
+	public static ManganRefinedIngot refinedingotMangan = new ManganRefinedIngot("refinedingot_mangan", "refinedingotMangan").setCreativeTab(FaMod.creativeTab);
 	public static ManganDust dustMangan = new ManganDust("dust_mangan", "dustMangan").setCreativeTab(FaMod.creativeTab);
 	public static ManganAxe manganAxe = new ManganAxe(Materials.manganToolMaterial, "mangan_axe").setCreativeTab(FaMod.creativeTab);;
 	public static ManganPickaxe manganPickaxe = new ManganPickaxe(Materials.manganToolMaterial, "mangan_pickaxe").setCreativeTab(FaMod.creativeTab);;
@@ -32,6 +34,7 @@ public class ModItems {
 		registry.registerAll(manganPickaxe);
 		registry.registerAll(coalShock);
 		registry.registerAll(smeltingEye);
+		registry.registerAll(refinedingotMangan);
 	}
 
 	public static void registerModels() {
@@ -41,6 +44,7 @@ public class ModItems {
 		manganPickaxe.registerItemModel();
 		coalShock.registerItemModel();
 		smeltingEye.registerItemModel();
+		refinedingotMangan.registerItemModel();
 	}
 	
 }

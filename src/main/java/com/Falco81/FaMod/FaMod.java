@@ -8,6 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import com.Falco81.FaMod.init.CreativeTab;
 import com.Falco81.FaMod.init.ModBlocks;
+import com.Falco81.FaMod.init.ModEntity;
 import com.Falco81.FaMod.init.ModItems;
 import com.Falco81.FaMod.init.ModRecipes;
 import com.Falco81.FaMod.init.OreDictionary;
@@ -64,6 +65,7 @@ public class FaMod {
 		modchecker = new ModChecker();
 		modchecker.prinSuccessMessage();
 		Materials.registerMaterials();
+		ModEntity.register();
 		MinecraftForge.EVENT_BUS.register(FurnaceFuelBurnTimeEventHandler.instance);
 	}
 

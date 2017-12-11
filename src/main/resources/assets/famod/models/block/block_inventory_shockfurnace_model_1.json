@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "down": "famod:blocks/famod_shockfurnace_wall",
+        "up": "famod:blocks/famod_shockfurnace_wall",
+        "east": "famod:blocks/famod_shockfurnace_active",
+        "west": "famod:blocks/famod_shockfurnace_unactive",
+        "north": "famod:blocks/famod_shockfurnace_unactive",
+        "south": "famod:blocks/famod_shockfurnace_unactive",
+        "particle": "famod:blocks/famod_shockfurnace_wall"
+    }
+}

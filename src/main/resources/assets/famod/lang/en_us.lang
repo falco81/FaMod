@@ -1,5 +1,6 @@
 # Items
 item.ingot_mangan.name=Mangan Ingot
+item.refinedingot_mangan.name=Mangan Refined Ingot
 item.dust_mangan.name=Mangan Dust
 item.mangan_axe.name=Mangan Axe
 item.mangan_pickaxe.name=Mangan Pickaxe
@@ -8,8 +9,11 @@ item.smelting_eye.name=Smelring Eye
 
 # Blocks
 tile.ore_mangan.name=Mangan Ore
+tile.block_mangan.name=Mangan Block
 tile.ore_shockcoal.name=Shock Coal Ore
 tile.block_shockcoal.name=Shock Coal Block
+tile.block_shockfurnace.name=Shock Furnace
 
 # Others
 itemGroup.famod=FaMod
+container.famod_inventory_shockfurnace.name=Shock Furnace
