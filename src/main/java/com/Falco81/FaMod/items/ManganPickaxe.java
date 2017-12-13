@@ -49,4 +49,6 @@ public class ManganPickaxe extends ItemPickaxe{
 			return super.getDestroySpeed(stack, state);
 		}
 	}
+	
+	
 }

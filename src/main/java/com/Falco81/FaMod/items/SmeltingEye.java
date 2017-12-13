@@ -61,6 +61,11 @@ public class SmeltingEye extends ItemTool {
         return true;
     }
 	
+	@Override
+	public boolean isEnchantable(ItemStack stack)
+    {
+        return false;
+    }
 
 	
 	@Override
