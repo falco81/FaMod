@@ -59,26 +59,29 @@ public class FaMod {
 	
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		System.out.println(name + " is loading!");
+		System.out.println(name + " is loading preInit!");
 		GameRegistry.registerWorldGenerator(new WorldGen(), 3);
 		modchecker = new ModChecker();
 		modchecker.prinSuccessMessage();
 		Materials.registerMaterials();
-		ModEntity.register();
-		MinecraftForge.EVENT_BUS.register(FurnaceFuelBurnTimeEventHandler.instance);
-		MinecraftForge.EVENT_BUS.register(new DrawBlockHighlightEventHandler());
-		
+		System.out.println(name + " preInit complete.");
 	}
 
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
-		ModRecipes.init();
+		System.out.println(name + " is loading init!");
 		OreDictionary.init();
+		ModRecipes.init();
+		ModEntity.register();
+		MinecraftForge.EVENT_BUS.register(FurnaceFuelBurnTimeEventHandler.instance);
+		MinecraftForge.EVENT_BUS.register(new DrawBlockHighlightEventHandler());
+		System.out.println(name + " init complete.");
 	}
 
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-
+		System.out.println(name + " is loading postInit!");
+		System.out.println(name + " postInit complete.");
 	}
 	
 	@Mod.EventBusSubscriber
